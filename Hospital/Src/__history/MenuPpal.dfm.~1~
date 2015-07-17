@@ -1,7 +1,7 @@
 object MenuPpalFrm: TMenuPpalFrm
   Left = 0
   Top = 0
-  Caption = 'Menu Principal'
+  Caption = 'MenuPpalFrm'
   ClientHeight = 201
   ClientWidth = 447
   Color = clBtnFace
