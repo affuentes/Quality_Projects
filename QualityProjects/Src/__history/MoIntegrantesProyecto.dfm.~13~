@@ -1,0 +1,237 @@
+object MoIntegrantesProyectoFrm: TMoIntegrantesProyectoFrm
+  Left = 0
+  Top = 0
+  Caption = 'Integrantes del Proyecto'
+  ClientHeight = 479
+  ClientWidth = 666
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter1: TSplitter
+    Left = 350
+    Top = 240
+    Width = 2
+    Height = 239
+    Align = alRight
+    Visible = False
+    ExplicitLeft = 396
+    ExplicitTop = 186
+    ExplicitHeight = 293
+  end
+  object P_BotonesArriba: TPanel
+    Left = 0
+    Top = 0
+    Width = 666
+    Height = 80
+    Align = alTop
+    TabOrder = 0
+    object Bt_Nuevo: TSpeedButton
+      Left = 16
+      Top = 9
+      Width = 65
+      Height = 65
+      Caption = 'Nuevo'
+      OnClick = Bt_NuevoClick
+    end
+    object Bt_Guardar: TSpeedButton
+      Left = 87
+      Top = 8
+      Width = 65
+      Height = 65
+      Caption = 'Guardar'
+      OnClick = Bt_GuardarClick
+    end
+    object Bt_Cancelar: TSpeedButton
+      Left = 158
+      Top = 8
+      Width = 65
+      Height = 65
+      Caption = 'Cancelar'
+      OnClick = Bt_CancelarClick
+    end
+    object Bt_Editar: TSpeedButton
+      Left = 229
+      Top = 8
+      Width = 65
+      Height = 65
+      Caption = 'Editar'
+      OnClick = Bt_EditarClick
+    end
+    object Bt_EliminarTodo: TSpeedButton
+      Left = 300
+      Top = 8
+      Width = 65
+      Height = 65
+      Caption = 'Eliminar'
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 160
+    Width = 666
+    Height = 80
+    Align = alTop
+    TabOrder = 1
+    object Panel1: TPanel
+      Left = 480
+      Top = 1
+      Width = 185
+      Height = 78
+      Align = alRight
+      BevelOuter = bvNone
+      TabOrder = 0
+      object Bt_Consultar: TSpeedButton
+        Left = 104
+        Top = 6
+        Width = 65
+        Height = 65
+        AllowAllUp = True
+        GroupIndex = 1
+        Caption = 'Consultar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = Bt_ConsultarClick
+      end
+    end
+  end
+  object DBG_ManIntegrantesProyecto: TDBGrid
+    Left = 0
+    Top = 240
+    Width = 350
+    Height = 239
+    Align = alClient
+    BorderStyle = bsNone
+    DataSource = DM_QualityProjectsCdsFrm.DS_ManIntegrantesProyecto
+    ReadOnly = True
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'IDENTIFICACION_INTPRO'
+        ReadOnly = False
+        Title.Caption = 'Identificaci'#243'n'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ID_PROYECTO'
+        ReadOnly = False
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'ID_ROL'
+        ReadOnly = False
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'APELLIDO1_INTPRO'
+        ReadOnly = False
+        Title.Caption = 'Apellido 1'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'APELLIDO2_INTPRO'
+        ReadOnly = False
+        Title.Caption = 'Apellido 2'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRE1_INTPRO'
+        ReadOnly = False
+        Title.Caption = 'Nombre 1'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOMBRE2_INTPRO'
+        ReadOnly = False
+        Title.Caption = 'Nombre 2 '
+        Width = 150
+        Visible = True
+      end>
+  end
+  object Panel3: TPanel
+    Left = 352
+    Top = 240
+    Width = 314
+    Height = 239
+    Align = alRight
+    BevelOuter = bvNone
+    TabOrder = 3
+    object Label1: TLabel
+      Left = 24
+      Top = 29
+      Width = 15
+      Height = 13
+      Caption = 'Rol'
+    end
+    object DBLCB_ID_ROL: TDBLookupComboBox
+      Left = 24
+      Top = 43
+      Width = 200
+      Height = 21
+      DataField = 'ID_ROL'
+      DataSource = DM_QualityProjectsCdsFrm.DS_ManIntegrantesProyecto
+      KeyField = 'ID_ROL'
+      ListField = 'ID_ROL;NOMBRE_ROL'
+      ListFieldIndex = 1
+      ListSource = DM_QualityProjectsCdsFrm.DS_ManRoles
+      TabOrder = 0
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 80
+    Width = 666
+    Height = 80
+    Align = alTop
+    TabOrder = 4
+    object Label2: TLabel
+      Left = 16
+      Top = 21
+      Width = 43
+      Height = 13
+      Caption = 'Proyecto'
+    end
+    object DBLCB_ID_PROYECTO: TDBLookupComboBox
+      Left = 16
+      Top = 35
+      Width = 200
+      Height = 21
+      KeyField = 'ID_PROYECTO'
+      ListField = 'ID_PROYECTO;NOMBRE_PROYECTO'
+      ListFieldIndex = 1
+      ListSource = DM_QualityProjectsCdsFrm.DS_ManProyectos
+      TabOrder = 0
+    end
+  end
+end

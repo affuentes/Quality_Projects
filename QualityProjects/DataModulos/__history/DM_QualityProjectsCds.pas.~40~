@@ -1,0 +1,139 @@
+unit DM_QualityProjectsCds;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Datasnap.DBClient;
+
+type
+  TDM_QualityProjectsCdsFrm = class(TDataModule)
+    CDS_ManProyectos: TClientDataSet;
+    CDS_ManFases: TClientDataSet;
+    DS_ManProyectos: TDataSource;
+    DS_ManFases: TDataSource;
+    CDS_ManRoles: TClientDataSet;
+    DS_ManRoles: TDataSource;
+    CDS_ManFuncionesRol: TClientDataSet;
+    DS_ManFuncionesRol: TDataSource;
+    CDS_ManProyectosID_PROYECTO: TIntegerField;
+    CDS_ManProyectosNOMBRE_PROYECTO: TStringField;
+    CDS_ManProyectosDESCRIPCION_PROYECTO: TStringField;
+    CDS_ManProyectosALCANCE_PROYECTO: TStringField;
+    CDS_ManProyectosPROPOSITO_PROYECTO: TStringField;
+    CDS_ManProyectosVERSION_PROYECTO: TStringField;
+    CDS_ManFasesID_FASE: TIntegerField;
+    CDS_ManFasesID_PROYECTO: TIntegerField;
+    CDS_ManFasesNOMBRE_FASE: TStringField;
+    CDS_ManFasesFECHA_INI_FASE: TSQLTimeStampField;
+    CDS_ManFasesFECHA_FIN_FASE: TSQLTimeStampField;
+    CDS_ManRolesID_ROL: TIntegerField;
+    CDS_ManRolesID_PROYECTO: TIntegerField;
+    CDS_ManRolesNOMBRE_ROL: TStringField;
+    CDS_ManFuncionesRolID_FUNROL: TIntegerField;
+    CDS_ManFuncionesRolID_PROYECTO: TIntegerField;
+    CDS_ManFuncionesRolID_ROL: TIntegerField;
+    CDS_ManFuncionesRolNOMBRE_FUNROL: TStringField;
+    CDS_ManIntegrantes: TClientDataSet;
+    DS_ManIntegrantes: TDataSource;
+    CDS_ManActividades: TClientDataSet;
+    DS_ManActividades: TDataSource;
+    CDS_ManActividadesID_ACTIVIDAD: TIntegerField;
+    CDS_ManActividadesID_PROYECTO: TIntegerField;
+    CDS_ManActividadesID_FASE: TIntegerField;
+    CDS_ManActividadesID_ROL: TIntegerField;
+    CDS_ManActividadesID_INTEGRANTE: TStringField;
+    CDS_ManActividadesNOMBRE_ACTIVIDAD: TStringField;
+    CDS_ManActividadesFECHA_INI_ACTIVIDAD: TSQLTimeStampField;
+    CDS_ManActividadesFECHA_FIN_ACTIVIDAD: TSQLTimeStampField;
+    CDS_ManIntegrantesID_INTEGRANTE: TStringField;
+    CDS_ManIntegrantesID_PROYECTO: TIntegerField;
+    CDS_ManIntegrantesID_ROL: TIntegerField;
+    CDS_ManIntegrantesNOMBRE_INTEGRANTE: TStringField;
+    CDS_SelRoles: TClientDataSet;
+    IntegerField1: TIntegerField;
+    IntegerField2: TIntegerField;
+    StringField1: TStringField;
+    DS_SelRoles: TDataSource;
+    procedure CDS_ManFasesNewRecord(DataSet: TDataSet);
+    procedure CDS_ManRolesNewRecord(DataSet: TDataSet);
+    procedure CDS_ManFuncionesRolNewRecord(DataSet: TDataSet);
+    procedure CDS_ManIntegrantesNewRecord(DataSet: TDataSet);
+    procedure CDS_ManActividadesNewRecord(DataSet: TDataSet);
+
+    procedure CDS_SelRolesAfterScroll(DataSet: TDataSet);
+    procedure CDS_ManRolesAfterScroll(DataSet: TDataSet);
+
+
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+    V_ID_PROYECTO, V_ID_ROL:Integer;
+  end;
+
+var
+  DM_QualityProjectsCdsFrm: TDM_QualityProjectsCdsFrm;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses DM_QualityProjectsCon;
+
+{$R *.dfm}
+
+
+//EVENTO OnNewRecord DEL CDS_ManFases
+procedure TDM_QualityProjectsCdsFrm.CDS_ManFasesNewRecord(DataSet: TDataSet);
+begin
+  CDS_ManFasesID_PROYECTO.AsInteger:=V_ID_PROYECTO;
+end;
+
+
+//EVENTO OnNewRecord DEL CDS_ManRoles
+procedure TDM_QualityProjectsCdsFrm.CDS_ManRolesNewRecord(DataSet: TDataSet);
+begin
+  CDS_ManRolesID_PROYECTO.AsInteger:=V_ID_PROYECTO;
+end;
+
+
+//EVENTO OnNewRecord DEL CDS_ManFunciones
+procedure TDM_QualityProjectsCdsFrm.CDS_ManFuncionesRolNewRecord(
+  DataSet: TDataSet);
+begin
+  CDS_ManFuncionesRolID_PROYECTO.AsInteger:=V_ID_PROYECTO;
+  CDS_ManFuncionesRolID_ROL.AsInteger:=V_ID_ROL;
+end;
+
+
+//EVENTO OnNewRecord DEL CDS_ManIntegrantes
+procedure TDM_QualityProjectsCdsFrm.CDS_ManIntegrantesNewRecord(
+  DataSet: TDataSet);
+begin
+  CDS_ManIntegrantesID_PROYECTO.AsInteger:=V_ID_PROYECTO;
+  CDS_ManIntegrantesID_ROL.AsInteger:=V_ID_ROL;
+end;
+
+
+//EVENTO OnNewRecord DEL CDS_ManActividades
+procedure TDM_QualityProjectsCdsFrm.CDS_ManActividadesNewRecord(
+  DataSet: TDataSet);
+begin
+  CDS_ManActividadesID_PROYECTO.AsInteger:=V_ID_PROYECTO;
+end;
+
+
+
+//EVENTO AfterScroll DEL CDS_SelRoles
+procedure TDM_QualityProjectsCdsFrm.CDS_SelRolesAfterScroll(DataSet: TDataSet);
+begin
+  CDS_ManIntegrantes.Close;
+  CDS_ManIntegrantes.Params.ParamByName('ID_PROYECTO').AsInteger:=CDS_ManRolesID_PROYECTO.AsInteger;
+  CDS_ManIntegrantes.Params.ParamByName('ID_ROL').AsInteger:=CDS_ManRolesID_ROL.AsInteger;
+  CDS_ManIntegrantes.Open;
+end;
+
+
+
+end.

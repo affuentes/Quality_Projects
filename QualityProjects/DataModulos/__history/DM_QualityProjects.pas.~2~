@@ -1,0 +1,26 @@
+unit DM_QualityProjects;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXFirebird, Data.DB, Data.SqlExpr;
+
+type
+  TDM_QualityProjectsFrm = class(TDataModule)
+    SQLC_QualityProjects: TSQLConnection;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM_QualityProjectsFrm: TDM_QualityProjectsFrm;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

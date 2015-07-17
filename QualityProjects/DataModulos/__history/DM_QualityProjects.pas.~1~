@@ -1,0 +1,25 @@
+unit DM_QualityProjects;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDM_QualityProjectsFrm = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM_QualityProjectsFrm: TDM_QualityProjectsFrm;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

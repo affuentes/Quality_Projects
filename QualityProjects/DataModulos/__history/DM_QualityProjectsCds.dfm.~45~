@@ -1,0 +1,270 @@
+object DM_QualityProjectsCdsFrm: TDM_QualityProjectsCdsFrm
+  OldCreateOrder = False
+  Height = 390
+  Width = 556
+  object CDS_ManProyectos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DSP_ManProyectos'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    Left = 72
+    Top = 24
+    object CDS_ManProyectosID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManProyectosNOMBRE_PROYECTO: TStringField
+      FieldName = 'NOMBRE_PROYECTO'
+      Size = 120
+    end
+    object CDS_ManProyectosDESCRIPCION_PROYECTO: TStringField
+      FieldName = 'DESCRIPCION_PROYECTO'
+      Size = 500
+    end
+    object CDS_ManProyectosALCANCE_PROYECTO: TStringField
+      FieldName = 'ALCANCE_PROYECTO'
+      Size = 500
+    end
+    object CDS_ManProyectosPROPOSITO_PROYECTO: TStringField
+      FieldName = 'PROPOSITO_PROYECTO'
+      Size = 500
+    end
+    object CDS_ManProyectosVERSION_PROYECTO: TStringField
+      FieldName = 'VERSION_PROYECTO'
+      Size = 10
+    end
+  end
+  object CDS_ManFases: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_ManFases'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    OnNewRecord = CDS_ManFasesNewRecord
+    Left = 72
+    Top = 104
+    object CDS_ManFasesID_FASE: TIntegerField
+      FieldName = 'ID_FASE'
+      Required = True
+    end
+    object CDS_ManFasesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManFasesNOMBRE_FASE: TStringField
+      FieldName = 'NOMBRE_FASE'
+      Size = 120
+    end
+    object CDS_ManFasesFECHA_INI_FASE: TSQLTimeStampField
+      FieldName = 'FECHA_INI_FASE'
+    end
+    object CDS_ManFasesFECHA_FIN_FASE: TSQLTimeStampField
+      FieldName = 'FECHA_FIN_FASE'
+    end
+  end
+  object DS_ManProyectos: TDataSource
+    DataSet = CDS_ManProyectos
+    Left = 72
+    Top = 40
+  end
+  object DS_ManFases: TDataSource
+    DataSet = CDS_ManFases
+    Left = 72
+    Top = 120
+  end
+  object CDS_ManRoles: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_ManRoles'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    OnNewRecord = CDS_ManRolesNewRecord
+    Left = 72
+    Top = 184
+    object CDS_ManRolesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object CDS_ManRolesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManRolesNOMBRE_ROL: TStringField
+      FieldName = 'NOMBRE_ROL'
+      Size = 120
+    end
+  end
+  object DS_ManRoles: TDataSource
+    DataSet = CDS_ManRoles
+    Left = 72
+    Top = 200
+  end
+  object CDS_ManFuncionesRol: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'ID_ROL'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_ManFuncionesRol'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    OnNewRecord = CDS_ManFuncionesRolNewRecord
+    Left = 72
+    Top = 264
+    object CDS_ManFuncionesRolID_FUNROL: TIntegerField
+      FieldName = 'ID_FUNROL'
+      Required = True
+    end
+    object CDS_ManFuncionesRolID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManFuncionesRolID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object CDS_ManFuncionesRolNOMBRE_FUNROL: TStringField
+      FieldName = 'NOMBRE_FUNROL'
+      Size = 500
+    end
+  end
+  object DS_ManFuncionesRol: TDataSource
+    DataSet = CDS_ManFuncionesRol
+    Left = 72
+    Top = 280
+  end
+  object CDS_ManIntegrantes: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'ID_ROL'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_ManIntegrantes'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    OnNewRecord = CDS_ManIntegrantesNewRecord
+    Left = 232
+    Top = 16
+    object CDS_ManIntegrantesID_INTEGRANTE: TStringField
+      FieldName = 'ID_INTEGRANTE'
+      Required = True
+    end
+    object CDS_ManIntegrantesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManIntegrantesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object CDS_ManIntegrantesNOMBRE_INTEGRANTE: TStringField
+      FieldName = 'NOMBRE_INTEGRANTE'
+      Size = 120
+    end
+  end
+  object DS_ManIntegrantes: TDataSource
+    DataSet = CDS_ManIntegrantes
+    Left = 232
+    Top = 32
+  end
+  object CDS_ManActividades: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_ManActividades'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    OnNewRecord = CDS_ManActividadesNewRecord
+    Left = 232
+    Top = 96
+    object CDS_ManActividadesID_ACTIVIDAD: TIntegerField
+      FieldName = 'ID_ACTIVIDAD'
+      Required = True
+    end
+    object CDS_ManActividadesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManActividadesID_FASE: TIntegerField
+      FieldName = 'ID_FASE'
+      Required = True
+    end
+    object CDS_ManActividadesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object CDS_ManActividadesID_INTEGRANTE: TStringField
+      FieldName = 'ID_INTEGRANTE'
+      Required = True
+    end
+    object CDS_ManActividadesNOMBRE_ACTIVIDAD: TStringField
+      FieldName = 'NOMBRE_ACTIVIDAD'
+      Size = 500
+    end
+    object CDS_ManActividadesFECHA_INI_ACTIVIDAD: TSQLTimeStampField
+      FieldName = 'FECHA_INI_ACTIVIDAD'
+    end
+    object CDS_ManActividadesFECHA_FIN_ACTIVIDAD: TSQLTimeStampField
+      FieldName = 'FECHA_FIN_ACTIVIDAD'
+    end
+  end
+  object DS_ManActividades: TDataSource
+    DataSet = CDS_ManActividades
+    Left = 232
+    Top = 112
+  end
+  object CDS_SelRoles: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_SelRoles'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    AfterScroll = CDS_SelRolesAfterScroll
+    Left = 376
+    Top = 16
+    object CDS_SelRolesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object CDS_SelRolesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_SelRolesNOMBRE_ROL: TStringField
+      FieldName = 'NOMBRE_ROL'
+      Size = 120
+    end
+  end
+  object DS_SelRoles: TDataSource
+    DataSet = CDS_SelRoles
+    Left = 376
+    Top = 32
+  end
+end

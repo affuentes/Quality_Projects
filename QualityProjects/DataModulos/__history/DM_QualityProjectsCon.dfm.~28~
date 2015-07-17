@@ -1,0 +1,337 @@
+object DM_QualityProjectsConFrm: TDM_QualityProjectsConFrm
+  OldCreateOrder = False
+  Height = 344
+  Width = 733
+  object SQLC_QualityProjects: TSQLConnection
+    ConnectionName = 'IBConnection'
+    DriverName = 'Firebird'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver190.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=19.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXFirebirdMetaDataCommandFactory,DbxFire' +
+        'birdDriver190.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXFirebirdMetaDataCommandF' +
+        'actory,Borland.Data.DbxFirebirdDriver,Version=19.0.0.0,Culture=n' +
+        'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverINTERBASE'
+      'LibraryName=dbxfb.dll'
+      'LibraryNameOsx=libsqlfb.dylib'
+      'VendorLib=gds32.dll'
+      'VendorLibWin64=fbclient.dll'
+      'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
+      'Database=D:\QualityProjects\BD\QP.GDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'SQLDialect=3'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'TrimChar=False'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'RoleName=RoleName'
+      'ServerCharSet='
+      'Trim Char=False')
+    Connected = True
+    Left = 80
+    Top = 24
+  end
+  object SQL_ManProyectos: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM PROYECTOS'
+      'ORDER BY NOMBRE_PROYECTO')
+    SQLConnection = SQLC_QualityProjects
+    Left = 232
+    Top = 24
+    object SQL_ManProyectosID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object SQL_ManProyectosNOMBRE_PROYECTO: TStringField
+      FieldName = 'NOMBRE_PROYECTO'
+      Size = 120
+    end
+    object SQL_ManProyectosDESCRIPCION_PROYECTO: TStringField
+      FieldName = 'DESCRIPCION_PROYECTO'
+      Size = 500
+    end
+    object SQL_ManProyectosALCANCE_PROYECTO: TStringField
+      FieldName = 'ALCANCE_PROYECTO'
+      Size = 500
+    end
+    object SQL_ManProyectosPROPOSITO_PROYECTO: TStringField
+      FieldName = 'PROPOSITO_PROYECTO'
+      Size = 500
+    end
+    object SQL_ManProyectosVERSION_PROYECTO: TStringField
+      FieldName = 'VERSION_PROYECTO'
+      Size = 10
+    end
+  end
+  object DSP_ManProyectos: TDataSetProvider
+    DataSet = SQL_ManProyectos
+    Left = 232
+    Top = 40
+  end
+  object LC_QualityProjects: TLocalConnection
+    Left = 80
+    Top = 80
+  end
+  object SQL_ManFases: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM FASES'
+      'WHERE (ID_PROYECTO =:ID_PROYECTO)')
+    SQLConnection = SQLC_QualityProjects
+    Left = 232
+    Top = 104
+    object SQL_ManFasesID_FASE: TIntegerField
+      FieldName = 'ID_FASE'
+      Required = True
+    end
+    object SQL_ManFasesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object SQL_ManFasesNOMBRE_FASE: TStringField
+      FieldName = 'NOMBRE_FASE'
+      Size = 120
+    end
+    object SQL_ManFasesFECHA_INI_FASE: TSQLTimeStampField
+      FieldName = 'FECHA_INI_FASE'
+    end
+    object SQL_ManFasesFECHA_FIN_FASE: TSQLTimeStampField
+      FieldName = 'FECHA_FIN_FASE'
+    end
+  end
+  object DSP_ManFases: TDataSetProvider
+    DataSet = SQL_ManFases
+    Left = 232
+    Top = 120
+  end
+  object SQL_ManRoles: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM ROLES'
+      'WHERE (ID_PROYECTO =:ID_PROYECTO)')
+    SQLConnection = SQLC_QualityProjects
+    Left = 232
+    Top = 176
+    object SQL_ManRolesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object SQL_ManRolesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object SQL_ManRolesNOMBRE_ROL: TStringField
+      FieldName = 'NOMBRE_ROL'
+      Size = 120
+    end
+  end
+  object DSP_ManRoles: TDataSetProvider
+    DataSet = SQL_ManRoles
+    Left = 232
+    Top = 192
+  end
+  object SQL_ManFuncionesRol: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'ID_ROL'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM FUNCIONESROL'
+      'WHERE (ID_PROYECTO =:ID_PROYECTO)'
+      'AND (ID_ROL =:ID_ROL)')
+    SQLConnection = SQLC_QualityProjects
+    Left = 232
+    Top = 256
+    object SQL_ManFuncionesRolID_FUNROL: TIntegerField
+      FieldName = 'ID_FUNROL'
+      Required = True
+    end
+    object SQL_ManFuncionesRolID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object SQL_ManFuncionesRolID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object SQL_ManFuncionesRolNOMBRE_FUNROL: TStringField
+      FieldName = 'NOMBRE_FUNROL'
+      Size = 500
+    end
+  end
+  object DSP_ManFuncionesRol: TDataSetProvider
+    DataSet = SQL_ManFuncionesRol
+    Left = 232
+    Top = 272
+  end
+  object SQL_ManIntegrantes: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'ID_ROL'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM INTEGRANTES'
+      'WHERE (ID_PROYECTO =:ID_PROYECTO)'
+      'AND (ID_ROL =:ID_ROL)')
+    SQLConnection = SQLC_QualityProjects
+    Left = 391
+    Top = 20
+    object SQL_ManIntegrantesID_INTEGRANTE: TStringField
+      FieldName = 'ID_INTEGRANTE'
+      Required = True
+    end
+    object SQL_ManIntegrantesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object SQL_ManIntegrantesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object SQL_ManIntegrantesNOMBRE_INTEGRANTE: TStringField
+      FieldName = 'NOMBRE_INTEGRANTE'
+      Size = 120
+    end
+  end
+  object DSP_ManIntegrantes: TDataSetProvider
+    DataSet = SQL_ManIntegrantes
+    Left = 391
+    Top = 36
+  end
+  object SQL_ManActividades: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM ACTIVIDADES'
+      'WHERE (ID_PROYECTO =:ID_PROYECTO)')
+    SQLConnection = SQLC_QualityProjects
+    Left = 391
+    Top = 100
+    object SQL_ManActividadesID_ACTIVIDAD: TIntegerField
+      FieldName = 'ID_ACTIVIDAD'
+      Required = True
+    end
+    object SQL_ManActividadesID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object SQL_ManActividadesID_FASE: TIntegerField
+      FieldName = 'ID_FASE'
+      Required = True
+    end
+    object SQL_ManActividadesID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object SQL_ManActividadesID_INTEGRANTE: TStringField
+      FieldName = 'ID_INTEGRANTE'
+      Required = True
+    end
+    object SQL_ManActividadesNOMBRE_ACTIVIDAD: TStringField
+      FieldName = 'NOMBRE_ACTIVIDAD'
+      Size = 500
+    end
+    object SQL_ManActividadesFECHA_INI_ACTIVIDAD: TSQLTimeStampField
+      FieldName = 'FECHA_INI_ACTIVIDAD'
+    end
+    object SQL_ManActividadesFECHA_FIN_ACTIVIDAD: TSQLTimeStampField
+      FieldName = 'FECHA_FIN_ACTIVIDAD'
+    end
+  end
+  object DSP_ManActividades: TDataSetProvider
+    DataSet = SQL_ManActividades
+    Left = 391
+    Top = 116
+  end
+  object SQL_SelRoles: TSQLQuery
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    SQL.Strings = (
+      'SELECT *'
+      'FROM ROLES'
+      'WHERE (ID_PROYECTO =:ID_PROYECTO)')
+    SQLConnection = SQLC_QualityProjects
+    Left = 552
+    Top = 16
+    object IntegerField1: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object IntegerField2: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object StringField1: TStringField
+      FieldName = 'NOMBRE_ROL'
+      Size = 120
+    end
+  end
+  object DSP_SelRoles: TDataSetProvider
+    DataSet = SQL_SelRoles
+    Left = 552
+    Top = 32
+  end
+end
