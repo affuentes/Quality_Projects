@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2015/07/02 21:58:55.000.214,=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/07/16 20:36:40.968,=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/07/16 20:37:10.654,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Hospital.dproj=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2015/07/16 20:40:12.981,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.dfm=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2015/07/16 20:40:12.981,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.pas=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/07/16 20:40:53.265,C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Src\MenuPpal.dfm=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.dfm</Transaction>
+    <Transaction>2015/07/16 20:40:53.265,C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Src\MenuPpal.pas=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.pas</Transaction>
+    <Transaction>2015/07/16 20:41:06.238,C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Bin\Hospital.dproj=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Hospital.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
