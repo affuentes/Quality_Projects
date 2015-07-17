@@ -1,7 +1,7 @@
-object MenuPpalFrm: TMenuPpalFrm
+object MedicoFrm: TMedicoFrm
   Left = 0
   Top = 0
-  Caption = 'Menu Principal'
+  Caption = 'Medico'
   ClientHeight = 201
   ClientWidth = 447
   Color = clBtnFace
