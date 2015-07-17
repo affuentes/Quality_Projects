@@ -15,31 +15,31 @@ object MenuPpalFrm: TMenuPpalFrm
   TextHeight = 13
   object Panel1: TPanel
     Left = 144
-    Top = 64
+    Top = 72
     Width = 417
     Height = 185
     TabOrder = 0
     object btMedico: TButton
       Left = 56
-      Top = 41
-      Width = 87
-      Height = 87
+      Top = 72
+      Width = 75
+      Height = 25
       Caption = 'Medico'
       TabOrder = 0
     end
     object btPaciente: TButton
       Left = 176
-      Top = 41
-      Width = 87
-      Height = 87
+      Top = 72
+      Width = 75
+      Height = 25
       Caption = 'Paciente'
       TabOrder = 1
     end
     object btCita: TButton
-      Left = 288
-      Top = 41
-      Width = 87
-      Height = 87
+      Left = 296
+      Top = 72
+      Width = 75
+      Height = 25
       Caption = 'Cita'
       TabOrder = 2
     end
