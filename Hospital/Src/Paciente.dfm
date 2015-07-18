@@ -2,8 +2,8 @@ object PacienteFrm: TPacienteFrm
   Left = 0
   Top = 0
   Caption = 'Paciente'
-  ClientHeight = 201
-  ClientWidth = 455
+  ClientHeight = 265
+  ClientWidth = 458
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -27,6 +27,12 @@ object PacienteFrm: TPacienteFrm
     Width = 75
     Height = 75
     Caption = 'Ayuda'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object btAgregar: TButton
@@ -35,6 +41,12 @@ object PacienteFrm: TPacienteFrm
     Width = 75
     Height = 75
     Caption = 'Agregar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object btCambiar: TButton
@@ -43,6 +55,12 @@ object PacienteFrm: TPacienteFrm
     Width = 75
     Height = 75
     Caption = 'Cambiar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 3
   end
   object btEliminar: TButton
@@ -51,6 +69,12 @@ object PacienteFrm: TPacienteFrm
     Width = 75
     Height = 75
     Caption = 'Eliminar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 4
   end
   object btRegresar: TButton
@@ -59,6 +83,12 @@ object PacienteFrm: TPacienteFrm
     Width = 75
     Height = 75
     Caption = 'Regresar'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 5
   end
 end

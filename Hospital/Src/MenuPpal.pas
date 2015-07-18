@@ -13,6 +13,7 @@ type
     btPaciente: TButton;
     btCita: TButton;
     btAyuda: TButton;
+    Label1: TLabel;
     procedure btMedicoClick(Sender: TObject);
     procedure btPacienteClick(Sender: TObject);
     procedure btCitaClick(Sender: TObject);

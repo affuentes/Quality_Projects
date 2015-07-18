@@ -2,8 +2,8 @@ object CitaFrm: TCitaFrm
   Left = 0
   Top = 0
   Caption = 'Cita'
-  ClientHeight = 201
-  ClientWidth = 454
+  ClientHeight = 326
+  ClientWidth = 453
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -26,6 +26,12 @@ object CitaFrm: TCitaFrm
       Width = 75
       Height = 75
       Caption = 'Regresar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object Button2: TButton
@@ -34,6 +40,12 @@ object CitaFrm: TCitaFrm
       Width = 75
       Height = 75
       Caption = 'Eliminar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
     end
     object Button3: TButton
@@ -42,6 +54,12 @@ object CitaFrm: TCitaFrm
       Width = 75
       Height = 75
       Caption = 'Cambiar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
     end
     object Button4: TButton
@@ -50,6 +68,12 @@ object CitaFrm: TCitaFrm
       Width = 75
       Height = 75
       Caption = 'Agregar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
     end
     object Button5: TButton
@@ -58,6 +82,12 @@ object CitaFrm: TCitaFrm
       Width = 75
       Height = 75
       Caption = 'Ayuda'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
     end
   end

@@ -14,9 +14,22 @@ object MenuPpalFrm: TMenuPpalFrm
   Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 272
+    Top = 24
+    Width = 144
+    Height = 26
+    Caption = 'Sistema de Citas '
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
+  end
   object panBotones: TPanel
     Left = 129
-    Top = 71
+    Top = 72
     Width = 417
     Height = 185
     TabOrder = 0
@@ -25,7 +38,13 @@ object MenuPpalFrm: TMenuPpalFrm
       Top = 49
       Width = 87
       Height = 87
-      Caption = 'Medico'
+      Caption = 'M'#233'dico'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
       OnClick = btMedicoClick
     end
@@ -35,6 +54,12 @@ object MenuPpalFrm: TMenuPpalFrm
       Width = 87
       Height = 87
       Caption = 'Paciente'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       OnClick = btPacienteClick
     end
@@ -44,16 +69,28 @@ object MenuPpalFrm: TMenuPpalFrm
       Width = 87
       Height = 87
       Caption = 'Cita'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
       OnClick = btCitaClick
     end
   end
   object btAyuda: TButton
-    Left = 591
-    Top = 295
-    Width = 75
-    Height = 25
+    Left = 584
+    Top = 288
+    Width = 82
+    Height = 32
     Caption = 'Ayuda'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
 end

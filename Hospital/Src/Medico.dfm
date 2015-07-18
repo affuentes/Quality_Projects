@@ -2,7 +2,7 @@ object MedicoFrm: TMedicoFrm
   Left = 0
   Top = 0
   Caption = 'Medico'
-  ClientHeight = 201
+  ClientHeight = 236
   ClientWidth = 460
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -26,6 +26,12 @@ object MedicoFrm: TMedicoFrm
       Width = 75
       Height = 75
       Caption = 'Regresar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object btEliminar: TButton
@@ -34,6 +40,12 @@ object MedicoFrm: TMedicoFrm
       Width = 75
       Height = 75
       Caption = 'Eliminar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
     end
     object btCambiar: TButton
@@ -42,6 +54,12 @@ object MedicoFrm: TMedicoFrm
       Width = 75
       Height = 75
       Caption = 'Cambiar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 2
     end
     object btAgregar: TButton
@@ -50,6 +68,12 @@ object MedicoFrm: TMedicoFrm
       Width = 75
       Height = 75
       Caption = 'Agregar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
     end
     object btAyuda: TButton
@@ -58,6 +82,12 @@ object MedicoFrm: TMedicoFrm
       Width = 75
       Height = 75
       Caption = 'Ayuda'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
     end
   end

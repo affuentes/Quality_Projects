@@ -7,7 +7,8 @@ uses
   Paciente in '..\Src\Paciente.pas' {PacienteFrm},
   Cita in '..\Src\Cita.pas' {CitaFrm},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  ReporteCitas in '..\Src\ReporteCitas.pas' {ReportedeCitasFrm};
 
 {$R *.res}
 
@@ -16,5 +17,6 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Amakrits');
   Application.CreateForm(TMenuPpalFrm, MenuPpalFrm);
+  Application.CreateForm(TReportedeCitasFrm, ReportedeCitasFrm);
   Application.Run;
 end.
