@@ -3,7 +3,7 @@ object MoFasesFrm: TMoFasesFrm
   Top = 0
   Caption = 'Fases'
   ClientHeight = 479
-  ClientWidth = 654
+  ClientWidth = 638
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,12 +18,11 @@ object MoFasesFrm: TMoFasesFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
-    Left = 632
+    Left = 298
     Top = 240
     Width = 2
     Height = 239
     Align = alRight
-    Visible = False
     ExplicitLeft = 396
     ExplicitTop = 186
     ExplicitHeight = 293
@@ -31,7 +30,7 @@ object MoFasesFrm: TMoFasesFrm
   object P_BotonesArriba: TPanel
     Left = 0
     Top = 0
-    Width = 654
+    Width = 638
     Height = 80
     Align = alTop
     TabOrder = 0
@@ -79,12 +78,12 @@ object MoFasesFrm: TMoFasesFrm
   object Panel2: TPanel
     Left = 0
     Top = 160
-    Width = 654
+    Width = 638
     Height = 80
     Align = alTop
     TabOrder = 1
     object Panel1: TPanel
-      Left = 468
+      Left = 452
       Top = 1
       Width = 185
       Height = 78
@@ -114,7 +113,7 @@ object MoFasesFrm: TMoFasesFrm
   object DBG_ManFases: TDBGrid
     Left = 0
     Top = 240
-    Width = 632
+    Width = 298
     Height = 239
     Align = alClient
     BorderStyle = bsNone
@@ -126,7 +125,6 @@ object MoFasesFrm: TMoFasesFrm
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnDblClick = DBG_ManFasesDblClick
     Columns = <
       item
         Expanded = False
@@ -154,33 +152,28 @@ object MoFasesFrm: TMoFasesFrm
         Expanded = False
         FieldName = 'FECHA_INI_FASE'
         ReadOnly = False
-        Title.Caption = 'Fecha Inicio Fase'
-        Width = 100
-        Visible = True
+        Visible = False
       end
       item
         Expanded = False
         FieldName = 'FECHA_FIN_FASE'
         ReadOnly = False
-        Title.Caption = 'Fase Fin Fase'
-        Width = 100
-        Visible = True
+        Visible = False
       end>
   end
   object Panel3: TPanel
-    Left = 634
+    Left = 300
     Top = 240
-    Width = 20
+    Width = 338
     Height = 239
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
-    Visible = False
   end
   object P_Parametros: TPanel
     Left = 0
     Top = 80
-    Width = 654
+    Width = 638
     Height = 80
     Align = alTop
     TabOrder = 4

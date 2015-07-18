@@ -176,6 +176,7 @@ object MoFasesFrm: TMoFasesFrm
     BevelOuter = bvNone
     TabOrder = 3
     Visible = False
+    ExplicitLeft = 316
   end
   object P_Parametros: TPanel
     Left = 0

@@ -21,7 +21,7 @@ type
     Bt_EliminarTodo: TSpeedButton;
     Panel1: TPanel;
     Bt_Consultar: TSpeedButton;
-    P_Parametros: TPanel;
+    Panel4: TPanel;
     DBLCB_ID_PROYECTO: TDBLookupComboBox;
     Label1: TLabel;
     procedure FormCreate(Sender: TObject);
@@ -145,7 +145,6 @@ begin
 
 
   P_BotonesArriba.Visible:= Bt_Consultar.Down;
-  P_Parametros.Enabled:= not Bt_Consultar.Down;
 
 end;
 

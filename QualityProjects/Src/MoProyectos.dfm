@@ -3,7 +3,7 @@ object MoProyectosFrm: TMoProyectosFrm
   Top = 0
   Caption = 'Proyectos'
   ClientHeight = 603
-  ClientWidth = 838
+  ClientWidth = 654
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -30,10 +30,11 @@ object MoProyectosFrm: TMoProyectosFrm
   object P_BotonesArriba: TPanel
     Left = 0
     Top = 0
-    Width = 838
+    Width = 654
     Height = 80
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 838
     object Bt_Nuevo: TSpeedButton
       Left = 16
       Top = 9
@@ -78,18 +79,20 @@ object MoProyectosFrm: TMoProyectosFrm
   object Panel2: TPanel
     Left = 0
     Top = 100
-    Width = 838
+    Width = 654
     Height = 80
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 838
     object Panel1: TPanel
-      Left = 652
+      Left = 468
       Top = 1
       Width = 185
       Height = 78
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitLeft = 652
       object Bt_Consultar: TSpeedButton
         Left = 104
         Top = 6
@@ -170,11 +173,12 @@ object MoProyectosFrm: TMoProyectosFrm
   object Panel3: TPanel
     Left = 304
     Top = 180
-    Width = 534
+    Width = 350
     Height = 423
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitLeft = 320
     object Label3: TLabel
       Left = 32
       Top = 10
@@ -244,15 +248,16 @@ object MoProyectosFrm: TMoProyectosFrm
   object Panel4: TPanel
     Left = 0
     Top = 80
-    Width = 838
+    Width = 654
     Height = 20
     Align = alTop
     TabOrder = 4
     Visible = False
+    ExplicitWidth = 838
   end
   object DS_ManProyectos: TDataSource
     DataSet = DM_QualityProjectsCdsFrm.CDS_ManProyectos
-    Left = 544
-    Top = 97
+    Left = 384
+    Top = 113
   end
 end

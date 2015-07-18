@@ -22,6 +22,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Golden Graphite');
   Application.CreateForm(TMoMenuPrincipalFrm, MoMenuPrincipalFrm);
   Application.Run;
 end.

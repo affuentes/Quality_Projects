@@ -21,7 +21,7 @@ type
     Bt_EliminarTodo: TSpeedButton;
     Panel1: TPanel;
     Bt_Consultar: TSpeedButton;
-    Panel4: TPanel;
+    P_Parametros: TPanel;
     Label2: TLabel;
     DBLCB_ID_PROYECTO: TDBLookupComboBox;
     Label3: TLabel;
@@ -173,6 +173,7 @@ begin
 
 
   P_BotonesArriba.Visible:= Bt_Consultar.Down;
+  P_Parametros.Enabled:= not Bt_Consultar.Down;
 
 end;
 

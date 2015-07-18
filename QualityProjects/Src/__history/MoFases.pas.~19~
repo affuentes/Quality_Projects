@@ -1,4 +1,4 @@
-unit MoRoles;
+unit MoFases;
 
 interface
 
@@ -8,10 +8,10 @@ uses
   Vcl.Buttons, Data.DB, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls;
 
 type
-  TMoRolesFrm = class(TForm)
+  TMoFasesFrm = class(TForm)
     P_BotonesArriba: TPanel;
     Panel2: TPanel;
-    DBG_ManRoles: TDBGrid;
+    DBG_ManFases: TDBGrid;
     Panel3: TPanel;
     Splitter1: TSplitter;
     Bt_Nuevo: TSpeedButton;
@@ -41,7 +41,7 @@ type
   end;
 
 var
-  MoRolesFrm: TMoRolesFrm;
+  MoFasesFrm: TMoFasesFrm;
 
 implementation
 
@@ -51,65 +51,65 @@ uses DM_QualityProjectsCds, DM_QualityProjectsCon, MoLibQualityProjects;
 
 
 //BOTON NUEVO
-procedure TMoRolesFrm.Bt_NuevoClick(Sender: TObject);
+procedure TMoFasesFrm.Bt_NuevoClick(Sender: TObject);
 begin
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.Append;
+  DM_QualityProjectsCdsFrm.CDS_ManFases.Append;
   PrendeApaga('NUEVO');
-  DBG_ManRoles.ReadOnly:=False;
-  FocusControl(DBG_ManRoles);
+  DBG_ManFases.ReadOnly:=False;
+  FocusControl(DBG_ManFases);
 end;
 
 
 //BOTON GUARDAR
-procedure TMoRolesFrm.Bt_GuardarClick(Sender: TObject);
+procedure TMoFasesFrm.Bt_GuardarClick(Sender: TObject);
 begin
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.ApplyUpdates(0);
+  DM_QualityProjectsCdsFrm.CDS_ManFases.ApplyUpdates(0);
 
-  if DM_QualityProjectsCdsFrm.CDS_ManRoles.RecordCount = 0 then
+  if DM_QualityProjectsCdsFrm.CDS_ManFases.RecordCount = 0 then
     PrendeApaga('DATOS0')
   else
     PrendeApaga('GUARDAR');
 
-  DBG_ManRoles.ReadOnly:=True;
+  DBG_ManFases.ReadOnly:=True;
 end;
 
 
 //BOTON CANCELAR TODO
-procedure TMoRolesFrm.Bt_CancelarClick(Sender: TObject);
+procedure TMoFasesFrm.Bt_CancelarClick(Sender: TObject);
 begin
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.Close;
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.Open;
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.Cancel;
+  DM_QualityProjectsCdsFrm.CDS_ManFases.Close;
+  DM_QualityProjectsCdsFrm.CDS_ManFases.Open;
+  DM_QualityProjectsCdsFrm.CDS_ManFases.Cancel;
 
-  if DM_QualityProjectsCdsFrm.CDS_ManRoles.RecordCount = 0 then
+  if DM_QualityProjectsCdsFrm.CDS_ManFases.RecordCount = 0 then
     PrendeApaga('DATOS0')
   else
     PrendeApaga('CANCELAR');
 
-  DBG_ManRoles.ReadOnly:=True;
+  DBG_ManFases.ReadOnly:=True;
 end;
 
 
 //BOTON EDITAR
-procedure TMoRolesFrm.Bt_EditarClick(Sender: TObject);
+procedure TMoFasesFrm.Bt_EditarClick(Sender: TObject);
 begin
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.Edit;
+  DM_QualityProjectsCdsFrm.CDS_ManFases.Edit;
   PrendeApaga('EDITAR');
-  DBG_ManRoles.ReadOnly:=False;
-  FocusControl(DBG_ManRoles);
+  DBG_ManFases.ReadOnly:=False;
+  FocusControl(DBG_ManFases);
 end;
 
 
 //BOTON ELIMINAR TODO
-procedure TMoRolesFrm.Bt_EliminarTodoClick(Sender: TObject);
+procedure TMoFasesFrm.Bt_EliminarTodoClick(Sender: TObject);
 begin
   if Application.MessageBox('¿ESTA SEGURO DE ELIMINAR TODOS LOS REGISTROS?','Quality Projects',MB_YESNO+MB_ICONQUESTION) = ID_NO then
     Abort;
 
-  DM_QualityProjectsCdsFrm.CDS_ManRoles.First;
-  while DM_QualityProjectsCdsFrm.CDS_ManRoles.RecordCount <> 0 do
+  DM_QualityProjectsCdsFrm.CDS_ManFases.First;
+  while DM_QualityProjectsCdsFrm.CDS_ManFases.RecordCount <> 0 do
     begin
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.Delete;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.Delete;
     end;
   PrendeApaga('ELIMINARTODO');
   ShowMessage('DEBE GUARDAR PARA ACPETAR LOS CAMBIOS');
@@ -117,30 +117,27 @@ end;
 
 
 //BOTON CONSULTAR
-procedure TMoRolesFrm.Bt_ConsultarClick(Sender: TObject);
+procedure TMoFasesFrm.Bt_ConsultarClick(Sender: TObject);
 begin
   if Bt_Consultar.Down then
     begin
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.Close;
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.Filtered:=False;
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.Params.ParamByName('ID_PROYECTO').AsInteger:=DBLCB_ID_PROYECTO.KeyValue;
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.Open;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.Close;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.Filtered:=False;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.Params.ParamByName('ID_PROYECTO').AsInteger:=DBLCB_ID_PROYECTO.KeyValue;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.Open;
       DM_QualityProjectsCdsFrm.V_ID_PROYECTO:=DBLCB_ID_PROYECTO.KeyValue;
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.RecordCount;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.RecordCount;
 
-      if DM_QualityProjectsCdsFrm.CDS_ManRoles.RecordCount = 0 then
+      if DM_QualityProjectsCdsFrm.CDS_ManFases.RecordCount = 0 then
         PrendeApaga('DATOS0')
       else
         PrendeApaga('CONSULTAR');
 
 
-
-
-
     end
   else
     begin
-      DM_QualityProjectsCdsFrm.CDS_ManRoles.Close;
+      DM_QualityProjectsCdsFrm.CDS_ManFases.Close;
     end;
 
 
@@ -156,7 +153,7 @@ end;
 
 //EVENTO OnCreate DE LA FORMA
 
-procedure TMoRolesFrm.FormCreate(Sender: TObject);
+procedure TMoFasesFrm.FormCreate(Sender: TObject);
 begin
   DM_QualityProjectsConFrm:=TDM_QualityProjectsConFrm.Create(Self);
   DM_QualityProjectsCdsFrm:=TDM_QualityProjectsCdsFrm.Create(Self);
@@ -164,7 +161,7 @@ end;
 
 
 //EVENTO OnDestroy DE LA FORMA
-procedure TMoRolesFrm.FormDestroy(Sender: TObject);
+procedure TMoFasesFrm.FormDestroy(Sender: TObject);
 begin
   DM_QualityProjectsConFrm.Free;
   DM_QualityProjectsCdsFrm.Free;
@@ -172,7 +169,7 @@ end;
 
 
 //EVENTO OnShow DE LA FORMA
-procedure TMoRolesFrm.FormShow(Sender: TObject);
+procedure TMoFasesFrm.FormShow(Sender: TObject);
 begin
   P_BotonesArriba.Visible:=False;
 
@@ -189,7 +186,7 @@ end;
 
 
 //PROCEDIMIENTO PrendeApaga
-procedure TMoRolesFrm.PrendeApaga(Accion:string);
+procedure TMoFasesFrm.PrendeApaga(Accion:string);
 begin
   BotonesPrendeApaga(Accion);
   Bt_Nuevo.Enabled:=Nuevo;

@@ -1,9 +1,9 @@
-object MoFasesFrm: TMoFasesFrm
+object MoRolesFrm: TMoRolesFrm
   Left = 0
   Top = 0
-  Caption = 'Fases'
+  Caption = 'Roles'
   ClientHeight = 479
-  ClientWidth = 654
+  ClientWidth = 666
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object MoFasesFrm: TMoFasesFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
-    Left = 632
+    Left = 644
     Top = 240
     Width = 2
     Height = 239
@@ -31,7 +31,7 @@ object MoFasesFrm: TMoFasesFrm
   object P_BotonesArriba: TPanel
     Left = 0
     Top = 0
-    Width = 654
+    Width = 666
     Height = 80
     Align = alTop
     TabOrder = 0
@@ -79,12 +79,12 @@ object MoFasesFrm: TMoFasesFrm
   object Panel2: TPanel
     Left = 0
     Top = 160
-    Width = 654
+    Width = 666
     Height = 80
     Align = alTop
     TabOrder = 1
     object Panel1: TPanel
-      Left = 468
+      Left = 480
       Top = 1
       Width = 185
       Height = 78
@@ -111,14 +111,14 @@ object MoFasesFrm: TMoFasesFrm
       end
     end
   end
-  object DBG_ManFases: TDBGrid
+  object DBG_ManRoles: TDBGrid
     Left = 0
     Top = 240
-    Width = 632
+    Width = 644
     Height = 239
     Align = alClient
     BorderStyle = bsNone
-    DataSource = DM_QualityProjectsCdsFrm.DS_ManFases
+    DataSource = DM_QualityProjectsCdsFrm.DS_ManRoles
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -126,13 +126,12 @@ object MoFasesFrm: TMoFasesFrm
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnDblClick = DBG_ManFasesDblClick
     Columns = <
       item
         Expanded = False
-        FieldName = 'ID_FASE'
+        FieldName = 'ID_ROL'
         ReadOnly = False
-        Title.Caption = 'Id Fase'
+        Title.Caption = 'Id Rol'
         Width = 100
         Visible = True
       end
@@ -144,31 +143,15 @@ object MoFasesFrm: TMoFasesFrm
       end
       item
         Expanded = False
-        FieldName = 'NOMBRE_FASE'
+        FieldName = 'NOMBRE_ROL'
         ReadOnly = False
-        Title.Caption = 'Nombre Fase'
-        Width = 200
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'FECHA_INI_FASE'
-        ReadOnly = False
-        Title.Caption = 'Fecha Inicio Fase'
-        Width = 100
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'FECHA_FIN_FASE'
-        ReadOnly = False
-        Title.Caption = 'Fase Fin Fase'
-        Width = 100
+        Title.Caption = 'Nombre Rol'
+        Width = 300
         Visible = True
       end>
   end
   object Panel3: TPanel
-    Left = 634
+    Left = 646
     Top = 240
     Width = 20
     Height = 239
@@ -177,10 +160,10 @@ object MoFasesFrm: TMoFasesFrm
     TabOrder = 3
     Visible = False
   end
-  object P_Parametros: TPanel
+  object Panel4: TPanel
     Left = 0
     Top = 80
-    Width = 654
+    Width = 666
     Height = 80
     Align = alTop
     TabOrder = 4

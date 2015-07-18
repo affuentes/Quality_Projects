@@ -21,7 +21,7 @@ type
     Bt_EliminarTodo: TSpeedButton;
     Panel1: TPanel;
     Bt_Consultar: TSpeedButton;
-    Panel4: TPanel;
+    P_Parametros: TPanel;
     DBLCB_ID_PROYECTO: TDBLookupComboBox;
     Label1: TLabel;
     procedure FormCreate(Sender: TObject);
@@ -33,6 +33,7 @@ type
     procedure Bt_CancelarClick(Sender: TObject);
     procedure Bt_EditarClick(Sender: TObject);
     procedure Bt_EliminarTodoClick(Sender: TObject);
+    procedure DBG_ManFasesDblClick(Sender: TObject);
   private
     { Private declarations }
     procedure PrendeApaga(Accion:string);
@@ -47,7 +48,8 @@ implementation
 
 {$R *.dfm}
 
-uses DM_QualityProjectsCds, DM_QualityProjectsCon, MoLibQualityProjects;
+uses DM_QualityProjectsCds, DM_QualityProjectsCon, MoLibQualityProjects,
+  Sel_Fecha;
 
 
 //BOTON NUEVO
@@ -134,9 +136,6 @@ begin
         PrendeApaga('CONSULTAR');
 
 
-
-
-
     end
   else
     begin
@@ -145,16 +144,50 @@ begin
 
 
   P_BotonesArriba.Visible:= Bt_Consultar.Down;
+  P_Parametros.Enabled:= not Bt_Consultar.Down;
+
+end;
+
+
+//EVENTO OnDblClick DE LA GRILLA
+procedure TMoFasesFrm.DBG_ManFasesDblClick(Sender: TObject);
+begin
+  if DBG_ManFases.ReadOnly = False then
+
+  //CAMPO FECHA_INI_FASE
+  if DBG_ManFases.SelectedField = DM_QualityProjectsCdsFrm.CDS_ManFasesFECHA_INI_FASE then
+    begin
+      Sel_FechaFrm:=TSel_FechaFrm.Create(Self);
+      if Sel_FechaFrm.ShowModal = mrOk then
+        begin
+          if not (DM_QualityProjectsCdsFrm.CDS_ManFases.State in (dsEditModes)) then
+            DM_QualityProjectsCdsFrm.CDS_ManFases.Edit;
+           DM_QualityProjectsCdsFrm.CDS_ManFasesFECHA_INI_FASE.AsDateTime:=Trunc(Sel_FechaFrm.FECHA);
+        end;
+      Sel_FechaFrm.Free;
+    end;
+
+  //CAMPO FECHA_FIN_FASE
+  if DBG_ManFases.SelectedField = DM_QualityProjectsCdsFrm.CDS_ManFasesFECHA_FIN_FASE then
+    begin
+      Sel_FechaFrm:=TSel_FechaFrm.Create(Self);
+      if Sel_FechaFrm.ShowModal = mrOk then
+        begin
+          if not (DM_QualityProjectsCdsFrm.CDS_ManFases.State in (dsEditModes)) then
+            DM_QualityProjectsCdsFrm.CDS_ManFases.Edit;
+           DM_QualityProjectsCdsFrm.CDS_ManFasesFECHA_FIN_FASE.AsDateTime:=Trunc(Sel_FechaFrm.FECHA);
+        end;
+      Sel_FechaFrm.Free;
+    end;
+
+
 
 end;
 
 
 
 
-
-
 //EVENTO OnCreate DE LA FORMA
-
 procedure TMoFasesFrm.FormCreate(Sender: TObject);
 begin
   DM_QualityProjectsConFrm:=TDM_QualityProjectsConFrm.Create(Self);

@@ -1,8 +1,8 @@
-object MoFasesFrm: TMoFasesFrm
+object MoProyectosFrm: TMoProyectosFrm
   Left = 0
   Top = 0
-  Caption = 'Fases'
-  ClientHeight = 479
+  Caption = 'Proyectos'
+  ClientHeight = 603
   ClientWidth = 654
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,12 +18,11 @@ object MoFasesFrm: TMoFasesFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
-    Left = 632
-    Top = 240
+    Left = 302
+    Top = 180
     Width = 2
-    Height = 239
+    Height = 423
     Align = alRight
-    Visible = False
     ExplicitLeft = 396
     ExplicitTop = 186
     ExplicitHeight = 293
@@ -35,6 +34,7 @@ object MoFasesFrm: TMoFasesFrm
     Height = 80
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 838
     object Bt_Nuevo: TSpeedButton
       Left = 16
       Top = 9
@@ -78,11 +78,12 @@ object MoFasesFrm: TMoFasesFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 160
+    Top = 100
     Width = 654
     Height = 80
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 838
     object Panel1: TPanel
       Left = 468
       Top = 1
@@ -91,6 +92,7 @@ object MoFasesFrm: TMoFasesFrm
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitLeft = 652
       object Bt_Consultar: TSpeedButton
         Left = 104
         Top = 6
@@ -111,14 +113,14 @@ object MoFasesFrm: TMoFasesFrm
       end
     end
   end
-  object DBG_ManFases: TDBGrid
+  object DBG_ManProyectos: TDBGrid
     Left = 0
-    Top = 240
-    Width = 632
-    Height = 239
+    Top = 180
+    Width = 302
+    Height = 423
     Align = alClient
     BorderStyle = bsNone
-    DataSource = DM_QualityProjectsCdsFrm.DS_ManFases
+    DataSource = DS_ManProyectos
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -126,81 +128,136 @@ object MoFasesFrm: TMoFasesFrm
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnDblClick = DBG_ManFasesDblClick
     Columns = <
       item
         Expanded = False
-        FieldName = 'ID_FASE'
+        FieldName = 'ID_PROYECTO'
         ReadOnly = False
-        Title.Caption = 'Id Fase'
+        Title.Caption = 'Id Proyecto'
         Width = 100
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'ID_PROYECTO'
+        FieldName = 'NOMBRE_PROYECTO'
         ReadOnly = False
-        Visible = False
-      end
-      item
-        Expanded = False
-        FieldName = 'NOMBRE_FASE'
-        ReadOnly = False
-        Title.Caption = 'Nombre Fase'
+        Title.Caption = 'Nombre Proyecto'
         Width = 200
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'FECHA_INI_FASE'
+        FieldName = 'DESCRIPCION_PROYECTO'
         ReadOnly = False
-        Title.Caption = 'Fecha Inicio Fase'
-        Width = 100
-        Visible = True
+        Visible = False
       end
       item
         Expanded = False
-        FieldName = 'FECHA_FIN_FASE'
+        FieldName = 'ALCANCE_PROYECTO'
         ReadOnly = False
-        Title.Caption = 'Fase Fin Fase'
-        Width = 100
-        Visible = True
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'PROPOSITO_PROYECTO'
+        ReadOnly = False
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'VERSION_PROYECTO'
+        ReadOnly = False
+        Visible = False
       end>
   end
   object Panel3: TPanel
-    Left = 634
-    Top = 240
-    Width = 20
-    Height = 239
+    Left = 304
+    Top = 180
+    Width = 350
+    Height = 423
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
-    Visible = False
+    ExplicitLeft = 320
+    object Label3: TLabel
+      Left = 32
+      Top = 10
+      Width = 100
+      Height = 13
+      Caption = 'Descripci'#243'n Proyecto'
+    end
+    object Label4: TLabel
+      Left = 32
+      Top = 137
+      Width = 83
+      Height = 13
+      Caption = 'Alcance Proyecto'
+    end
+    object Label5: TLabel
+      Left = 32
+      Top = 264
+      Width = 91
+      Height = 13
+      Caption = 'Proposito Proyecto'
+    end
+    object Label6: TLabel
+      Left = 32
+      Top = 391
+      Width = 81
+      Height = 13
+      Caption = 'Versi'#243'n Proyecto'
+      FocusControl = DBE_VERSION_PROYECTO
+    end
+    object DBM_DESCRIPCION_PROYECTO: TDBMemo
+      Left = 32
+      Top = 24
+      Width = 300
+      Height = 100
+      DataField = 'DESCRIPCION_PROYECTO'
+      DataSource = DS_ManProyectos
+      TabOrder = 0
+    end
+    object DBM_ALCANCE_PROYECTO: TDBMemo
+      Left = 32
+      Top = 151
+      Width = 300
+      Height = 100
+      DataField = 'ALCANCE_PROYECTO'
+      DataSource = DS_ManProyectos
+      TabOrder = 1
+    end
+    object DBM_PROPOSITO_PROYECTO: TDBMemo
+      Left = 32
+      Top = 278
+      Width = 300
+      Height = 100
+      DataField = 'PROPOSITO_PROYECTO'
+      DataSource = DS_ManProyectos
+      TabOrder = 2
+    end
+    object DBE_VERSION_PROYECTO: TDBEdit
+      Left = 32
+      Top = 405
+      Width = 300
+      Height = 21
+      DataField = 'VERSION_PROYECTO'
+      DataSource = DS_ManProyectos
+      TabOrder = 3
+    end
   end
-  object P_Parametros: TPanel
+  object Panel4: TPanel
     Left = 0
     Top = 80
     Width = 654
-    Height = 80
+    Height = 20
     Align = alTop
     TabOrder = 4
-    object Label1: TLabel
-      Left = 16
-      Top = 21
-      Width = 43
-      Height = 13
-      Caption = 'Proyecto'
-    end
-    object DBLCB_ID_PROYECTO: TDBLookupComboBox
-      Left = 16
-      Top = 40
-      Width = 349
-      Height = 21
-      KeyField = 'ID_PROYECTO'
-      ListField = 'ID_PROYECTO;NOMBRE_PROYECTO'
-      ListFieldIndex = 1
-      ListSource = DM_QualityProjectsCdsFrm.DS_ManProyectos
-      TabOrder = 0
-    end
+    Visible = False
+    ExplicitWidth = 838
+  end
+  object DS_ManProyectos: TDataSource
+    DataSet = DM_QualityProjectsCdsFrm.CDS_ManProyectos
+    Left = 544
+    Top = 97
   end
 end

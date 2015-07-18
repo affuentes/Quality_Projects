@@ -3,7 +3,7 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
   Top = 0
   Caption = 'Funciones del Rol'
   ClientHeight = 479
-  ClientWidth = 666
+  ClientWidth = 654
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,7 +18,7 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
-    Left = 644
+    Left = 632
     Top = 240
     Width = 2
     Height = 239
@@ -31,10 +31,11 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
   object P_BotonesArriba: TPanel
     Left = 0
     Top = 0
-    Width = 666
+    Width = 654
     Height = 80
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 666
     object Bt_Nuevo: TSpeedButton
       Left = 16
       Top = 9
@@ -79,18 +80,20 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
   object Panel2: TPanel
     Left = 0
     Top = 160
-    Width = 666
+    Width = 654
     Height = 80
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 666
     object Panel1: TPanel
-      Left = 480
+      Left = 468
       Top = 1
       Width = 185
       Height = 78
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
+      ExplicitLeft = 480
       object Bt_Consultar: TSpeedButton
         Left = 104
         Top = 6
@@ -114,7 +117,7 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
   object DBG_ManFunionesRol: TDBGrid
     Left = 0
     Top = 240
-    Width = 644
+    Width = 632
     Height = 239
     Align = alClient
     BorderStyle = bsNone
@@ -157,7 +160,7 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
       end>
   end
   object Panel3: TPanel
-    Left = 646
+    Left = 634
     Top = 240
     Width = 20
     Height = 239
@@ -165,14 +168,16 @@ object MoFuncionesRolFrm: TMoFuncionesRolFrm
     BevelOuter = bvNone
     TabOrder = 3
     Visible = False
+    ExplicitLeft = 646
   end
-  object Panel4: TPanel
+  object P_Parametros: TPanel
     Left = 0
     Top = 80
-    Width = 666
+    Width = 654
     Height = 80
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 666
     object Label1: TLabel
       Left = 226
       Top = 21

@@ -126,7 +126,6 @@ object MoFasesFrm: TMoFasesFrm
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    OnDblClick = DBG_ManFasesDblClick
     Columns = <
       item
         Expanded = False
@@ -176,6 +175,7 @@ object MoFasesFrm: TMoFasesFrm
     BevelOuter = bvNone
     TabOrder = 3
     Visible = False
+    ExplicitLeft = 316
   end
   object P_Parametros: TPanel
     Left = 0

@@ -145,7 +145,6 @@ begin
 
 
   P_BotonesArriba.Visible:= Bt_Consultar.Down;
-  P_Parametros.Enabled:= not Bt_Consultar.Down;
 
 end;
 
