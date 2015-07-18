@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Medico, Paciente, Cita;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Medico, Paciente, Cita, Usuario;
 
 type
   TMenuPpalFrm = class(TForm)
@@ -14,6 +14,7 @@ type
     btCita: TButton;
     btAyuda: TButton;
     Label1: TLabel;
+    btUsuario: TButton;
     procedure btMedicoClick(Sender: TObject);
     procedure btPacienteClick(Sender: TObject);
     procedure btCitaClick(Sender: TObject);

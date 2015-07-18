@@ -28,9 +28,9 @@ object MenuPpalFrm: TMenuPpalFrm
     ParentFont = False
   end
   object panBotones: TPanel
-    Left = 129
+    Left = 65
     Top = 72
-    Width = 417
+    Width = 520
     Height = 185
     TabOrder = 0
     object btMedico: TButton
@@ -77,6 +77,20 @@ object MenuPpalFrm: TMenuPpalFrm
       ParentFont = False
       TabOrder = 2
       OnClick = btCitaClick
+    end
+    object btUsuario: TButton
+      Left = 400
+      Top = 49
+      Width = 87
+      Height = 87
+      Caption = 'Usuario'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
     end
   end
   object btAyuda: TButton
