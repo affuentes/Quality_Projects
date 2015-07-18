@@ -8,8 +8,7 @@ uses
   Cita in '..\Src\Cita.pas' {CitaFrm},
   Vcl.Themes,
   Vcl.Styles,
-  ReporteCitas in '..\Src\ReporteCitas.pas' {ReportedeCitasFrm},
-  Usuario in '..\Src\Usuario.pas' {UsuarioFrm};
+  ReporteCitas in '..\Src\ReporteCitas.pas' {ReportedeCitasFrm};
 
 {$R *.res}
 
@@ -18,5 +17,6 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Amakrits');
   Application.CreateForm(TMenuPpalFrm, MenuPpalFrm);
+  Application.CreateForm(TReportedeCitasFrm, ReportedeCitasFrm);
   Application.Run;
 end.
