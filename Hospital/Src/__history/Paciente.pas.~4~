@@ -1,4 +1,4 @@
-unit MenuPpal;
+unit Paciente;
 
 interface
 
@@ -7,11 +7,13 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TMenuPpalFrm = class(TForm)
+  TPacienteFrm = class(TForm)
     panBotones: TPanel;
-    btMedico: TButton;
-    btPaciente: TButton;
-    btCita: TButton;
+    btAyuda: TButton;
+    btAgregar: TButton;
+    btCambiar: TButton;
+    btEliminar: TButton;
+    Button5: TButton;
   private
     { Private declarations }
   public
@@ -19,7 +21,7 @@ type
   end;
 
 var
-  MenuPpalFrm: TMenuPpalFrm;
+  PacienteFrm: TPacienteFrm;
 
 implementation
 

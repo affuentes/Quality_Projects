@@ -1,4 +1,4 @@
-unit Medico;
+unit Paciente;
 
 interface
 
@@ -7,13 +7,9 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TMedicoFrm = class(TForm)
+  TPacienteFrm = class(TForm)
     panBotones: TPanel;
-    btRegresar: TButton;
-    btEliminar: TButton;
-    btCambiar: TButton;
-    btAgregar: TButton;
-    btAyuda: TButton;
+    Button1: TButton;
   private
     { Private declarations }
   public
@@ -21,7 +17,7 @@ type
   end;
 
 var
-  MedicoFrm: TMedicoFrm;
+  PacienteFrm: TPacienteFrm;
 
 implementation
 

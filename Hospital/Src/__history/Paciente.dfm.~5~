@@ -53,12 +53,12 @@ object PacienteFrm: TPacienteFrm
     Caption = 'Eliminar'
     TabOrder = 4
   end
-  object btRegresar: TButton
+  object Button5: TButton
     Left = 352
     Top = 16
     Width = 75
     Height = 75
-    Caption = 'Regresar'
+    Caption = 'Button5'
     TabOrder = 5
   end
 end

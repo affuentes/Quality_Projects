@@ -48,4 +48,12 @@ object MenuPpalFrm: TMenuPpalFrm
       OnClick = btCitaClick
     end
   end
+  object btAyuda: TButton
+    Left = 591
+    Top = 295
+    Width = 75
+    Height = 25
+    Caption = 'Ayuda'
+    TabOrder = 1
+  end
 end
