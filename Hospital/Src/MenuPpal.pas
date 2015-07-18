@@ -30,7 +30,7 @@ implementation
 
 procedure TMenuPpalFrm.btCitaClick(Sender: TObject);
 begin
-  CitaFrm:= CitaFrm.Create(Self);
+  CitaFrm:= TCitaFrm.Create(Self);
   CitaFrm.ShowModal;
   CitaFrm.Free;
 end;

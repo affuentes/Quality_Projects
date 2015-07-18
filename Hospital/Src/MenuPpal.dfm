@@ -11,17 +11,18 @@ object MenuPpalFrm: TMenuPpalFrm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object panBotones: TPanel
-    Left = 152
-    Top = 64
+    Left = 129
+    Top = 71
     Width = 417
     Height = 185
     TabOrder = 0
     object btMedico: TButton
-      Left = 48
-      Top = 41
+      Left = 43
+      Top = 49
       Width = 87
       Height = 87
       Caption = 'Medico'
@@ -29,8 +30,8 @@ object MenuPpalFrm: TMenuPpalFrm
       OnClick = btMedicoClick
     end
     object btPaciente: TButton
-      Left = 168
-      Top = 41
+      Left = 163
+      Top = 49
       Width = 87
       Height = 87
       Caption = 'Paciente'
@@ -38,8 +39,8 @@ object MenuPpalFrm: TMenuPpalFrm
       OnClick = btPacienteClick
     end
     object btCita: TButton
-      Left = 280
-      Top = 41
+      Left = 288
+      Top = 49
       Width = 87
       Height = 87
       Caption = 'Cita'

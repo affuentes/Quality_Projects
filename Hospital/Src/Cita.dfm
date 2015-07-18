@@ -11,6 +11,7 @@ object CitaFrm: TCitaFrm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
 end
