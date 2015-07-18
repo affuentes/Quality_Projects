@@ -13,8 +13,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TMenuPpalFrm, MenuPpalFrm);
-  Application.CreateForm(TMedicoFrm, MedicoFrm);
-  Application.CreateForm(TPacienteFrm, PacienteFrm);
-  Application.CreateForm(TCitaFrm, CitaFrm);
   Application.Run;
 end.
