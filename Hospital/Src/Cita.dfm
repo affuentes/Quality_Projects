@@ -2,8 +2,8 @@ object CitaFrm: TCitaFrm
   Left = 0
   Top = 0
   Caption = 'Cita'
-  ClientHeight = 326
-  ClientWidth = 453
+  ClientHeight = 305
+  ClientWidth = 558
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,12 +18,12 @@ object CitaFrm: TCitaFrm
   object panBotones: TPanel
     Left = 8
     Top = 8
-    Width = 439
+    Width = 529
     Height = 89
     TabOrder = 0
     object btRegresar: TButton
-      Left = 344
-      Top = 8
+      Left = 424
+      Top = 6
       Width = 75
       Height = 75
       Caption = 'Regresar'
@@ -33,11 +33,11 @@ object CitaFrm: TCitaFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 5
     end
     object btEliminar: TButton
-      Left = 263
-      Top = 8
+      Left = 343
+      Top = 6
       Width = 75
       Height = 75
       Caption = 'Eliminar'
@@ -47,11 +47,11 @@ object CitaFrm: TCitaFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 4
     end
     object btCambiar: TButton
-      Left = 182
-      Top = 8
+      Left = 262
+      Top = 6
       Width = 75
       Height = 75
       Caption = 'Cambiar'
@@ -61,7 +61,8 @@ object CitaFrm: TCitaFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 3
+      OnClick = btCambiarClick
     end
     object btAgregar: TButton
       Left = 101
@@ -75,7 +76,7 @@ object CitaFrm: TCitaFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 1
       OnClick = btAgregarClick
     end
     object btAyuda: TButton
@@ -90,13 +91,28 @@ object CitaFrm: TCitaFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 0
+    end
+    object btCancelar: TButton
+      Left = 182
+      Top = 6
+      Width = 75
+      Height = 75
+      Caption = 'Cancelar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btCambiarClick
     end
   end
   object DBGCita: TDBGrid
     Left = 8
-    Top = 136
-    Width = 437
+    Top = 112
+    Width = 529
     Height = 169
     DataSource = DM_HospitalFrm.DSCita
     TabOrder = 1

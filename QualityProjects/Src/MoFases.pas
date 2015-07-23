@@ -114,7 +114,7 @@ begin
       DM_QualityProjectsCdsFrm.CDS_ManFases.Delete;
     end;
   PrendeApaga('ELIMINARTODO');
-  ShowMessage('DEBE GUARDAR PARA ACPETAR LOS CAMBIOS');
+  ShowMessage('DEBE GUARDAR PARA ACEPTAR LOS CAMBIOS');
 end;
 
 

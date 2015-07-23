@@ -32,7 +32,7 @@ object MedicoFrm: TMedicoFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 4
     end
     object btEliminar: TButton
       Left = 263
@@ -46,7 +46,7 @@ object MedicoFrm: TMedicoFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 3
     end
     object btCambiar: TButton
       Left = 182
@@ -74,7 +74,7 @@ object MedicoFrm: TMedicoFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 1
     end
     object btAyuda: TButton
       Left = 20
@@ -88,7 +88,7 @@ object MedicoFrm: TMedicoFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 0
     end
   end
   object DBGrid1: TDBGrid
@@ -112,19 +112,16 @@ object MedicoFrm: TMedicoFrm
       item
         Expanded = False
         FieldName = 'Nombre'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Especialidad'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Localidad'
-        Width = 64
         Visible = True
       end>
   end

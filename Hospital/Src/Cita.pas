@@ -16,8 +16,10 @@ type
     btAgregar: TButton;
     btAyuda: TButton;
     DBGCita: TDBGrid;
+    btCancelar: TButton;
     procedure btAgregarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btCambiarClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -38,6 +40,13 @@ uses DM_HospitalCon;
 procedure TCitaFrm.btAgregarClick(Sender: TObject);
 begin
   DM_HospitalFrm.ADODatCita.Append;
+  DBGCita.ReadOnly:=False;
+  FocusControl(DBGCita);
+end;
+
+procedure TCitaFrm.btCambiarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatCita.Edit;
   DBGCita.ReadOnly:=False;
   FocusControl(DBGCita);
 end;
