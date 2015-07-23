@@ -1,0 +1,26 @@
+object DMHospitalFrm: TDMHospitalFrm
+  OldCreateOrder = False
+  Height = 339
+  Width = 483
+  object SQLC_Hospital: TSQLConnection
+    ConnectionName = 'MSSQLConnection'
+    DriverName = 'MSSQL'
+    Params.Strings = (
+      'SchemaOverride=sa.dbo'
+      'DriverName=MSSQL'
+      'HostName=ServerName'
+      'DataBase=Database Name'
+      'User_Name=user'
+      'Password=password'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'OS Authentication=False'
+      'Prepare SQL=False'
+      'ConnectTimeout=60'
+      'Mars_Connection=False')
+    Left = 72
+    Top = 32
+  end
+end

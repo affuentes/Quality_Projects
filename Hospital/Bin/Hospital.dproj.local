@@ -3,26 +3,31 @@
 	<Transactions>
     <Transaction>2015/07/02 21:58:55.000.214,=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2015/07/16 20:36:40.000.968,=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2015/07/16 20:37:10.000.654,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Hospital.dproj</Transaction>
-    <Transaction>2015/07/16 20:40:12.000.981,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.pas</Transaction>
-    <Transaction>2015/07/16 20:40:12.000.981,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.dfm</Transaction>
-    <Transaction>2015/07/16 20:40:53.000.265,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.pas=C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Src\MenuPpal.pas</Transaction>
-    <Transaction>2015/07/16 20:40:53.000.265,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.dfm=C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Src\MenuPpal.dfm</Transaction>
-    <Transaction>2015/07/16 20:41:06.000.238,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Hospital.dproj=C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Bin\Hospital.dproj</Transaction>
+    <Transaction>2015/07/16 20:37:10.000.654,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Hospital.dproj=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2015/07/16 20:40:12.000.981,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.dfm=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2015/07/16 20:40:12.000.981,C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.pas=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/07/16 20:40:53.000.265,C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Src\MenuPpal.pas=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.pas</Transaction>
+    <Transaction>2015/07/16 20:40:53.000.265,C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Src\MenuPpal.dfm=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\MenuPpal.dfm</Transaction>
+    <Transaction>2015/07/16 20:41:06.000.238,C:\Users\Jairo Chava\Documents\GitHub\Quality_Projects\Hospital\Bin\Hospital.dproj=C:\Users\Jairo Chava\Documents\RAD Studio\Projects\Hospital.dproj</Transaction>
     <Transaction>2015/07/17 09:41:30.000.425,=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.pas</Transaction>
-    <Transaction>2015/07/17 09:42:21.000.560,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Medico.dfm=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.dfm</Transaction>
-    <Transaction>2015/07/17 09:42:21.000.560,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Medico.pas=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.pas</Transaction>
+    <Transaction>2015/07/17 09:42:21.000.560,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.pas=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Medico.pas</Transaction>
+    <Transaction>2015/07/17 09:42:21.000.560,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.dfm=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Medico.dfm</Transaction>
     <Transaction>2015/07/17 10:05:27.000.341,=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.pas</Transaction>
-    <Transaction>2015/07/17 10:06:03.000.861,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.dfm=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Paciente.dfm</Transaction>
-    <Transaction>2015/07/17 10:06:03.000.861,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.pas=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Paciente.pas</Transaction>
+    <Transaction>2015/07/17 10:06:03.000.861,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Paciente.dfm=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.dfm</Transaction>
+    <Transaction>2015/07/17 10:06:03.000.861,D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Src\Paciente.pas=D:\_Proyectos_programacion\Proyectos_DELPHI\Git\Hospital\Bin\Unit1.pas</Transaction>
     <Transaction>2015/07/17 18:09:16.000.061,=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
-    <Transaction>2015/07/17 18:09:54.000.713,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Cita.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm</Transaction>
-    <Transaction>2015/07/17 18:09:54.000.713,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Cita.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
+    <Transaction>2015/07/17 18:09:54.000.713,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Cita.pas</Transaction>
+    <Transaction>2015/07/17 18:09:54.000.713,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Cita.dfm</Transaction>
     <Transaction>2015/07/17 20:57:06.000.653,=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
-    <Transaction>2015/07/17 20:58:11.000.323,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\ReporteCitas.dfm</Transaction>
-    <Transaction>2015/07/17 20:58:11.000.323,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\ReporteCitas.pas</Transaction>
+    <Transaction>2015/07/17 20:58:11.000.323,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\ReporteCitas.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm</Transaction>
+    <Transaction>2015/07/17 20:58:11.000.323,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\ReporteCitas.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
     <Transaction>2015/07/17 21:08:37.000.776,=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
-    <Transaction>2015/07/17 21:11:34.000.530,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Usuario.dfm</Transaction>
-    <Transaction>2015/07/17 21:11:34.000.530,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Usuario.pas</Transaction>
+    <Transaction>2015/07/17 21:11:34.000.530,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Usuario.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
+    <Transaction>2015/07/17 21:11:34.000.530,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Src\Usuario.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm</Transaction>
+    <Transaction>2015/07/22 18:44:10.414,=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
+    <Transaction>2015/07/22 18:44:35.305,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\DataModulos\DMHospitalCon.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.pas</Transaction>
+    <Transaction>2015/07/22 18:44:35.305,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\DataModulos\DMHospitalCon.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\Bin\Unit1.dfm</Transaction>
+    <Transaction>2015/07/22 18:49:53.524,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\DataModulos\DM_HospitalCon.dfm=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\DataModulos\DMHospitalCon.dfm</Transaction>
+    <Transaction>2015/07/22 18:49:53.524,D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\DataModulos\DM_HospitalCon.pas=D:\_Proyectos_programacion\RepositorioGit\Quality_Projects\Hospital\DataModulos\DMHospitalCon.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -1,0 +1,26 @@
+unit DM_HospitalCon;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXMSSQL, Data.DB, Data.SqlExpr;
+
+type
+  TDM_HospitalFrm = class(TDataModule)
+    SQLC_Hospital: TSQLConnection;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM_HospitalFrm: TDM_HospitalFrm;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

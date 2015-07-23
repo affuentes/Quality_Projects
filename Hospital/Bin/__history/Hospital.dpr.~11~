@@ -10,7 +10,7 @@ uses
   Vcl.Styles,
   ReporteCitas in '..\Src\ReporteCitas.pas' {ReportedeCitasFrm},
   Usuario in '..\Src\Usuario.pas' {UsuarioFrm},
-  DM_HospitalCon in '..\DataModulos\DM_HospitalCon.pas' {DM_HospitalFrm: TDataModule};
+  DMHospitalCon in '..\DataModulos\DMHospitalCon.pas' {DMHospitalFrm: TDataModule};
 
 {$R *.res}
 
@@ -19,6 +19,6 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Amakrits');
   Application.CreateForm(TMenuPpalFrm, MenuPpalFrm);
-  Application.CreateForm(TDM_HospitalFrm, DM_HospitalFrm);
+  Application.CreateForm(TDMHospitalFrm, DMHospitalFrm);
   Application.Run;
 end.
