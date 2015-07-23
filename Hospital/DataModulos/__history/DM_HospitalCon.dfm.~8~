@@ -9,8 +9,8 @@
       'nfo=False;User ID="";Initial Catalog=BdHospital;Data Source=(Loc' +
       'al)\SQlEXPRESS;Initial File Name="";Server SPN=""'
     Provider = 'SQLNCLI10.1'
-    Left = 45
-    Top = 113
+    Left = 53
+    Top = 25
   end
   object ADODatCita: TADODataSet
     Active = True
@@ -39,7 +39,7 @@
   end
   object DSCita: TDataSource
     DataSet = ADODatCita
-    Left = 229
+    Left = 253
     Top = 25
   end
   object ADODatUsuario: TADODataSet
@@ -76,61 +76,7 @@
   end
   object DSUsuario: TDataSource
     DataSet = ADODatUsuario
-    Left = 224
-    Top = 104
-  end
-  object ADODatMedico: TADODataSet
-    Active = True
-    Connection = ADOConHospital
-    CursorType = ctStatic
-    CommandText = 'select * from Medico'
-    Parameters = <>
-    Left = 352
-    Top = 24
-    object ADODatMedicoidMedico: TIntegerField
-      FieldName = 'idMedico'
-    end
-    object ADODatMedicoNombre: TStringField
-      FieldName = 'Nombre'
-      Size = 150
-    end
-    object ADODatMedicoEspecialidad: TStringField
-      FieldName = 'Especialidad'
-      Size = 100
-    end
-    object ADODatMedicoLocalidad: TStringField
-      FieldName = 'Localidad'
-      Size = 100
-    end
-  end
-  object DSMedico: TDataSource
-    DataSet = ADODatMedico
-    Left = 432
-    Top = 24
-  end
-  object ADODatPaciente: TADODataSet
-    Active = True
-    Connection = ADOConHospital
-    CursorType = ctStatic
-    CommandText = 'select * from Paciente'
-    Parameters = <>
-    Left = 352
-    Top = 104
-    object ADODatPacienteidPaciente: TIntegerField
-      FieldName = 'idPaciente'
-    end
-    object ADODatPacienteNombre: TStringField
-      FieldName = 'Nombre'
-      Size = 150
-    end
-    object ADODatPacienteEnfermedad: TStringField
-      FieldName = 'Enfermedad'
-      Size = 100
-    end
-  end
-  object DSPaciente: TDataSource
-    DataSet = ADODatPaciente
-    Left = 432
+    Left = 256
     Top = 104
   end
 end

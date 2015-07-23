@@ -103,23 +103,5 @@ object PacienteFrm: TPacienteFrm
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'idPaciente'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Nombre'
-        Width = 64
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Enfermedad'
-        Width = 64
-        Visible = True
-      end>
   end
 end

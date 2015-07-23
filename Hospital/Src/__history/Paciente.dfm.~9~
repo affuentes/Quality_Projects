@@ -91,35 +91,4 @@ object PacienteFrm: TPacienteFrm
     ParentFont = False
     TabOrder = 5
   end
-  object DBGrid1: TDBGrid
-    Left = 8
-    Top = 120
-    Width = 439
-    Height = 120
-    DataSource = DM_HospitalFrm.DSPaciente
-    TabOrder = 6
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'idPaciente'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Nombre'
-        Width = 64
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Enfermedad'
-        Width = 64
-        Visible = True
-      end>
-  end
 end

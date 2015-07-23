@@ -4,8 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
-  Vcl.Grids, Vcl.DBGrids;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TPacienteFrm = class(TForm)
@@ -15,7 +14,6 @@ type
     btCambiar: TButton;
     btEliminar: TButton;
     btRegresar: TButton;
-    DBGrid1: TDBGrid;
   private
     { Private declarations }
   public
@@ -28,7 +26,5 @@ var
 implementation
 
 {$R *.dfm}
-
-uses DM_HospitalCon;
 
 end.

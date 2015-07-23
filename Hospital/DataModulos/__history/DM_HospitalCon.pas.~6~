@@ -24,17 +24,6 @@ type
     ADODatUsuarioContraseña: TStringField;
     ADODatUsuarioCorreo: TStringField;
     DSUsuario: TDataSource;
-    ADODatMedico: TADODataSet;
-    ADODatMedicoidMedico: TIntegerField;
-    ADODatMedicoNombre: TStringField;
-    ADODatMedicoEspecialidad: TStringField;
-    ADODatMedicoLocalidad: TStringField;
-    DSMedico: TDataSource;
-    ADODatPaciente: TADODataSet;
-    DSPaciente: TDataSource;
-    ADODatPacienteidPaciente: TIntegerField;
-    ADODatPacienteNombre: TStringField;
-    ADODatPacienteEnfermedad: TStringField;
   private
     { Private declarations }
   public

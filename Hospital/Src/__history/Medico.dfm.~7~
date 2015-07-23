@@ -2,7 +2,7 @@ object MedicoFrm: TMedicoFrm
   Left = 0
   Top = 0
   Caption = 'Medico'
-  ClientHeight = 270
+  ClientHeight = 335
   ClientWidth = 461
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
