@@ -18,6 +18,7 @@ type
     procedure btMedicoClick(Sender: TObject);
     procedure btPacienteClick(Sender: TObject);
     procedure btCitaClick(Sender: TObject);
+    procedure btUsuarioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +51,13 @@ begin
   PacienteFrm:= TPacienteFrm.Create(Self);
   PacienteFrm.ShowModal;
   PacienteFrm.Free;
+end;
+
+procedure TMenuPpalFrm.btUsuarioClick(Sender: TObject);
+begin
+  UsuarioFrm:= TUsuarioFrm.Create(Self);
+  UsuarioFrm.ShowModal;
+  UsuarioFrm.Free;
 end;
 
 end.

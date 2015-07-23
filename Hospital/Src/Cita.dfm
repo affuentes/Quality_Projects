@@ -91,4 +91,44 @@ object CitaFrm: TCitaFrm
       TabOrder = 4
     end
   end
+  object DBGrid1: TDBGrid
+    Left = 28
+    Top = 136
+    Width = 399
+    Height = 120
+    DataSource = DM_HospitalFrm.DSCita
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idCita'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'idPaciente'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'idMedico'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Fecha'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'metodoPago'
+        Width = 69
+        Visible = True
+      end>
+  end
 end

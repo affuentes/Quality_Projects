@@ -2,8 +2,8 @@ object UsuarioFrm: TUsuarioFrm
   Left = 0
   Top = 0
   Caption = 'Usuario'
-  ClientHeight = 264
-  ClientWidth = 451
+  ClientHeight = 329
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object UsuarioFrm: TUsuarioFrm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object panBotones: TPanel
@@ -89,5 +90,54 @@ object UsuarioFrm: TUsuarioFrm
       ParentFont = False
       TabOrder = 4
     end
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 112
+    Width = 439
+    Height = 193
+    DataSource = DM_HospitalFrm.DSUsuario
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idUsuario'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nombre'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Rol'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Alias'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Contrase'#241'a'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Correo'
+        Width = 64
+        Visible = True
+      end>
   end
 end

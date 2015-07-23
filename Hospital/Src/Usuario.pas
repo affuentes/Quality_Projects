@@ -15,6 +15,7 @@ type
     btCambiar: TButton;
     btAgregar: TButton;
     btAyuda: TButton;
+    DBGrid1: TDBGrid;
   private
     { Private declarations }
   public
@@ -27,5 +28,7 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DM_HospitalCon;
 
 end.

@@ -19,6 +19,5 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Amakrits');
   Application.CreateForm(TMenuPpalFrm, MenuPpalFrm);
-  Application.CreateForm(TDM_HospitalFrm, DM_HospitalFrm);
   Application.Run;
 end.

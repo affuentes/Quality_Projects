@@ -91,6 +91,7 @@ object MenuPpalFrm: TMenuPpalFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = btUsuarioClick
     end
   end
   object btAyuda: TButton

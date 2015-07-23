@@ -11,6 +11,19 @@ type
     ADOConHospital: TADOConnection;
     ADODatCita: TADODataSet;
     DSCita: TDataSource;
+    ADODatCitaidCita: TIntegerField;
+    ADODatCitaidPaciente: TIntegerField;
+    ADODatCitaidMedico: TIntegerField;
+    ADODatCitaFecha: TDateField;
+    ADODatCitametodoPago: TStringField;
+    ADODatUsuario: TADODataSet;
+    ADODatUsuarioidUsuario: TIntegerField;
+    ADODatUsuarioNombre: TStringField;
+    ADODatUsuarioRol: TStringField;
+    ADODatUsuarioAlias: TStringField;
+    ADODatUsuarioContraseña: TStringField;
+    ADODatUsuarioCorreo: TStringField;
+    DSUsuario: TDataSource;
   private
     { Private declarations }
   public
