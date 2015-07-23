@@ -10,7 +10,7 @@ uses
 type
   TCitaFrm = class(TForm)
     panBotones: TPanel;
-    btRegresar: TButton;
+    btBuscar: TButton;
     btEliminar: TButton;
     btEditar: TButton;
     btNuevo: TButton;
@@ -18,9 +18,11 @@ type
     DBGCita: TDBGrid;
     btCancelar: TButton;
     btGuardar: TButton;
-    procedure btNuevoClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btCancelarClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure btNuevoClick(Sender: TObject);
+    procedure btGuardarClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -38,6 +40,18 @@ implementation
 
 uses DM_HospitalCon;
 
+procedure TCitaFrm.btCancelarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatCita.Close;
+  DM_HospitalFrm.ADODatCita.Open;
+  DM_HospitalFrm.ADODatCita.Cancel;
+end;
+
+procedure TCitaFrm.btGuardarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatCita.UpdateStatus();
+end;
+
 procedure TCitaFrm.btNuevoClick(Sender: TObject);
 begin
   DM_HospitalFrm.ADODatCita.Append;
@@ -45,17 +59,14 @@ begin
   FocusControl(DBGCita);
 end;
 
-procedure TCitaFrm.btCancelarClick(Sender: TObject);
-begin
-  DM_HospitalFrm.ADODatCita.Close;
-  DM_HospitalFrm.ADODatCita.Open;
-  DM_HospitalFrm.ADODatCita.Cancel;
-
-end;
-
 procedure TCitaFrm.FormCreate(Sender: TObject);
 begin
         DM_HospitalFrm := TDM_HospitalFrm.Create(Self);
+end;
+
+procedure TCitaFrm.FormDestroy(Sender: TObject);
+begin
+        DM_HospitalFrm.Free;
 end;
 
 end.

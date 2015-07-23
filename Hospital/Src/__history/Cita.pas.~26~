@@ -10,14 +10,14 @@ uses
 type
   TCitaFrm = class(TForm)
     panBotones: TPanel;
-    btRegresar: TButton;
+    btBuscar: TButton;
     btEliminar: TButton;
-    btCambiar: TButton;
-    btAgregar: TButton;
+    btEditar: TButton;
+    btNuevo: TButton;
     btAyuda: TButton;
     DBGCita: TDBGrid;
     btCancelar: TButton;
-    procedure btAgregarClick(Sender: TObject);
+    btGuardar: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btCancelarClick(Sender: TObject);
   private
@@ -36,13 +36,6 @@ implementation
 {$R *.dfm}
 
 uses DM_HospitalCon;
-
-procedure TCitaFrm.btAgregarClick(Sender: TObject);
-begin
-  DM_HospitalFrm.ADODatCita.Append;
-  DBGCita.ReadOnly:=False;
-  FocusControl(DBGCita);
-end;
 
 procedure TCitaFrm.btCancelarClick(Sender: TObject);
 begin

@@ -13,6 +13,7 @@ object CitaFrm: TCitaFrm
   OldCreateOrder = False
   Position = poDesktopCenter
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object panBotones: TPanel
@@ -48,6 +49,7 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 4
+      OnClick = btEliminarClick
     end
     object btEditar: TButton
       Left = 343
@@ -62,6 +64,7 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = btEditarClick
     end
     object btNuevo: TButton
       Left = 101
@@ -76,6 +79,7 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      OnClick = btNuevoClick
     end
     object btAyuda: TButton
       Left = 20

@@ -22,8 +22,7 @@ type
     procedure btCancelarClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btNuevoClick(Sender: TObject);
-    procedure btEditarClick(Sender: TObject);
-    procedure btEliminarClick(Sender: TObject);
+    procedure btGuardarClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -48,16 +47,9 @@ begin
   DM_HospitalFrm.ADODatCita.Cancel;
 end;
 
-procedure TCitaFrm.btEditarClick(Sender: TObject);
+procedure TCitaFrm.btGuardarClick(Sender: TObject);
 begin
-  DM_HospitalFrm.ADODatCita.Edit;
-  DBGCita.ReadOnly:=False;
-  FocusControl(DBGCita);
-end;
-
-procedure TCitaFrm.btEliminarClick(Sender: TObject);
-begin
-  DM_HospitalFrm.ADODatCita.Delete;
+  DM_HospitalFrm.ADODatCita.UpdateStatus(0);
 end;
 
 procedure TCitaFrm.btNuevoClick(Sender: TObject);

@@ -2,8 +2,8 @@ object CitaFrm: TCitaFrm
   Left = 0
   Top = 0
   Caption = 'Cita'
-  ClientHeight = 305
-  ClientWidth = 558
+  ClientHeight = 304
+  ClientWidth = 613
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,15 +18,15 @@ object CitaFrm: TCitaFrm
   object panBotones: TPanel
     Left = 8
     Top = 8
-    Width = 529
+    Width = 593
     Height = 89
     TabOrder = 0
-    object btRegresar: TButton
-      Left = 424
+    object btBuscar: TButton
+      Left = 505
       Top = 6
       Width = 75
       Height = 75
-      Caption = 'Regresar'
+      Caption = 'Buscar'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -36,7 +36,7 @@ object CitaFrm: TCitaFrm
       TabOrder = 5
     end
     object btEliminar: TButton
-      Left = 343
+      Left = 424
       Top = 6
       Width = 75
       Height = 75
@@ -49,12 +49,12 @@ object CitaFrm: TCitaFrm
       ParentFont = False
       TabOrder = 4
     end
-    object btCambiar: TButton
-      Left = 262
+    object btEditar: TButton
+      Left = 343
       Top = 6
       Width = 75
       Height = 75
-      Caption = 'Cambiar'
+      Caption = 'Editar'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -63,12 +63,12 @@ object CitaFrm: TCitaFrm
       ParentFont = False
       TabOrder = 3
     end
-    object btAgregar: TButton
+    object btNuevo: TButton
       Left = 101
       Top = 8
       Width = 75
-      Height = 75
-      Caption = 'Agregar'
+      Height = 73
+      Caption = 'Nuevo'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -76,7 +76,6 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      OnClick = btAgregarClick
     end
     object btAyuda: TButton
       Left = 20
@@ -93,7 +92,7 @@ object CitaFrm: TCitaFrm
       TabOrder = 0
     end
     object btCancelar: TButton
-      Left = 182
+      Left = 262
       Top = 6
       Width = 75
       Height = 75
@@ -107,11 +106,25 @@ object CitaFrm: TCitaFrm
       TabOrder = 2
       OnClick = btCancelarClick
     end
+    object btGuardar: TButton
+      Left = 181
+      Top = 7
+      Width = 75
+      Height = 73
+      Caption = 'Guardar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+    end
   end
   object DBGCita: TDBGrid
     Left = 8
     Top = 112
-    Width = 529
+    Width = 593
     Height = 169
     DataSource = DM_HospitalFrm.DSCita
     TabOrder = 1
