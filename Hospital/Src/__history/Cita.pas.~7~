@@ -1,0 +1,54 @@
+unit Cita;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TCitaFrm = class(TForm)
+    panBotones: TPanel;
+    btRegresar: TButton;
+    btEliminar: TButton;
+    btCambiar: TButton;
+    btAgregar: TButton;
+    btAyuda: TButton;
+    DBGCita: TDBGrid;
+    procedure btAgregarClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure PrendeApaga(Accion:string);
+  public
+    { Public declarations }
+  end;
+
+var
+  CitaFrm: TCitaFrm;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_HospitalCon;
+
+procedure TCitaFrm.btAgregarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatCita.Append;
+  PrendeApaga('NUEVO');
+  DBGCita.ReadOnly:=False;
+  FocusControl(DBGCita);
+end;
+
+procedure TCitaFrm.PrendeApaga(Accion: string);
+begin
+  BotonesPrendeApaga(Accion);
+  btAgregar.Enabled:=Nuevo;
+  Bt_Guardar.Enabled:=Guardar;
+  Bt_Cancelar.Enabled:=CancelarTodo;
+  Bt_Editar.Enabled:=Editar;
+  Bt_EliminarTodo.Enabled:=EliminarTodo;
+end;
+
+end.

@@ -64,7 +64,7 @@ object UsuarioFrm: TUsuarioFrm
     end
     object btAgregar: TButton
       Left = 101
-      Top = 8
+      Top = 6
       Width = 75
       Height = 75
       Caption = 'Agregar'

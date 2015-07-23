@@ -12,6 +12,7 @@ object CitaFrm: TCitaFrm
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object panBotones: TPanel
@@ -20,7 +21,7 @@ object CitaFrm: TCitaFrm
     Width = 439
     Height = 89
     TabOrder = 0
-    object Button1: TButton
+    object btRegresar: TButton
       Left = 344
       Top = 8
       Width = 75
@@ -34,7 +35,7 @@ object CitaFrm: TCitaFrm
       ParentFont = False
       TabOrder = 0
     end
-    object Button2: TButton
+    object btEliminar: TButton
       Left = 263
       Top = 8
       Width = 75
@@ -48,7 +49,7 @@ object CitaFrm: TCitaFrm
       ParentFont = False
       TabOrder = 1
     end
-    object Button3: TButton
+    object btCambiar: TButton
       Left = 182
       Top = 8
       Width = 75
@@ -62,7 +63,7 @@ object CitaFrm: TCitaFrm
       ParentFont = False
       TabOrder = 2
     end
-    object Button4: TButton
+    object btAgregar: TButton
       Left = 101
       Top = 8
       Width = 75
@@ -75,8 +76,9 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = btAgregarClick
     end
-    object Button5: TButton
+    object btAyuda: TButton
       Left = 20
       Top = 8
       Width = 75
@@ -91,7 +93,7 @@ object CitaFrm: TCitaFrm
       TabOrder = 4
     end
   end
-  object DBGrid1: TDBGrid
+  object DBGCita: TDBGrid
     Left = 8
     Top = 136
     Width = 437
