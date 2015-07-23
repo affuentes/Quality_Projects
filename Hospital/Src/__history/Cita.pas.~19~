@@ -16,8 +16,10 @@ type
     btAgregar: TButton;
     btAyuda: TButton;
     DBGCita: TDBGrid;
+    btCancelar: TButton;
     procedure btAgregarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btCambiarClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -42,9 +44,16 @@ begin
   FocusControl(DBGCita);
 end;
 
+procedure TCitaFrm.btCambiarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatCita.Edit;
+  DBGCita.ReadOnly:=False;
+  FocusControl(DBGCita);
+end;
+
 procedure TCitaFrm.FormCreate(Sender: TObject);
 begin
-        DM_HospitalFrm:= DM_HospitalFrm.Create(Self);
+        DM_HospitalFrm := TDM_HospitalFrm.Create(Self);
 end;
 
 end.
