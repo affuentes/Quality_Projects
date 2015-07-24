@@ -1,0 +1,48 @@
+unit Paciente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TPacienteFrm = class(TForm)
+    DBGrid1: TDBGrid;
+    panBotones: TPanel;
+    btBuscar: TButton;
+    btEliminar: TButton;
+    btEditar: TButton;
+    btNuevo: TButton;
+    btAyuda: TButton;
+    btCancelar: TButton;
+    btGuardar: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  PacienteFrm: TPacienteFrm;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_HospitalCon;
+
+procedure TPacienteFrm.FormCreate(Sender: TObject);
+begin
+  DM_HospitalFrm := TDM_HospitalFrm.Create(Self);
+end;
+
+procedure TPacienteFrm.FormDestroy(Sender: TObject);
+begin
+  DM_HospitalFrm.Free;
+end;
+
+end.
