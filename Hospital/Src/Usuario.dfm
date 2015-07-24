@@ -3,7 +3,7 @@ object UsuarioFrm: TUsuarioFrm
   Top = 0
   Caption = 'Usuario'
   ClientHeight = 329
-  ClientWidth = 462
+  ClientWidth = 611
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,31 +12,82 @@ object UsuarioFrm: TUsuarioFrm
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
+  object DBGUsuario: TDBGrid
+    Left = 8
+    Top = 112
+    Width = 595
+    Height = 193
+    DataSource = DM_HospitalFrm.DSUsuario
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idUsuario'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nombre'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Rol'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Alias'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Contrase'#241'a'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Correo'
+        Width = 100
+        Visible = True
+      end>
+  end
   object panBotones: TPanel
     Left = 8
     Top = 8
-    Width = 439
+    Width = 593
     Height = 89
-    TabOrder = 0
-    object btRegresar: TButton
-      Left = 344
-      Top = 8
+    TabOrder = 1
+    object btBuscar: TButton
+      Left = 505
+      Top = 6
       Width = 75
       Height = 75
-      Caption = 'Regresar'
+      Caption = 'Buscar'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 5
     end
     object btEliminar: TButton
-      Left = 263
-      Top = 8
+      Left = 424
+      Top = 6
       Width = 75
       Height = 75
       Caption = 'Eliminar'
@@ -46,28 +97,30 @@ object UsuarioFrm: TUsuarioFrm
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 4
+      OnClick = btEliminarClick
     end
-    object btCambiar: TButton
-      Left = 182
-      Top = 8
+    object btEditar: TButton
+      Left = 343
+      Top = 6
       Width = 75
       Height = 75
-      Caption = 'Cambiar'
+      Caption = 'Editar'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 3
+      OnClick = btEditarClick
     end
-    object btAgregar: TButton
+    object btNuevo: TButton
       Left = 101
-      Top = 6
+      Top = 8
       Width = 75
-      Height = 75
-      Caption = 'Agregar'
+      Height = 73
+      Caption = 'Nuevo'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -75,6 +128,7 @@ object UsuarioFrm: TUsuarioFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      OnClick = btNuevoClick
     end
     object btAyuda: TButton
       Left = 20
@@ -90,49 +144,34 @@ object UsuarioFrm: TUsuarioFrm
       ParentFont = False
       TabOrder = 0
     end
-  end
-  object DBGrid1: TDBGrid
-    Left = 8
-    Top = 112
-    Width = 439
-    Height = 193
-    DataSource = DM_HospitalFrm.DSUsuario
-    TabOrder = 1
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'idUsuario'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Nombre'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Rol'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Alias'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Contrase'#241'a'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Correo'
-        Visible = True
-      end>
+    object btCancelar: TButton
+      Left = 262
+      Top = 6
+      Width = 75
+      Height = 75
+      Caption = 'Cancelar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btCancelarClick
+    end
+    object btGuardar: TButton
+      Left = 181
+      Top = 7
+      Width = 75
+      Height = 73
+      Caption = 'Guardar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+    end
   end
 end
