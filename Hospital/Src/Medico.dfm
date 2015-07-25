@@ -3,7 +3,7 @@ object MedicoFrm: TMedicoFrm
   Top = 0
   Caption = 'Medico'
   ClientHeight = 270
-  ClientWidth = 615
+  ClientWidth = 614
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,9 +18,9 @@ object MedicoFrm: TMedicoFrm
   TextHeight = 13
   object DBGMedico: TDBGrid
     Left = 8
-    Top = 128
+    Top = 112
     Width = 599
-    Height = 120
+    Height = 150
     DataSource = DM_HospitalFrm.DSMedico
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -37,19 +37,16 @@ object MedicoFrm: TMedicoFrm
       item
         Expanded = False
         FieldName = 'Nombre'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Especialidad'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Localidad'
-        Width = 64
         Visible = True
       end>
   end
@@ -123,12 +120,14 @@ object MedicoFrm: TMedicoFrm
       Top = 8
       Width = 75
       Height = 75
+      BiDiMode = bdLeftToRight
       Caption = 'Ayuda'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Calibri'
       Font.Style = []
+      ParentBiDiMode = False
       ParentFont = False
       TabOrder = 0
     end
