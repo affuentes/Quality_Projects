@@ -1,9 +1,10 @@
 object PacienteFrm: TPacienteFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Paciente'
-  ClientHeight = 265
-  ClientWidth = 615
+  ClientHeight = 275
+  ClientWidth = 625
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

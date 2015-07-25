@@ -1,9 +1,10 @@
 object MedicoFrm: TMedicoFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Medico'
-  ClientHeight = 270
-  ClientWidth = 614
+  ClientHeight = 280
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

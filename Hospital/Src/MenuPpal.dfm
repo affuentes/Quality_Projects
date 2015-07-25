@@ -1,9 +1,10 @@
 object MenuPpalFrm: TMenuPpalFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Menu Principal'
-  ClientHeight = 328
-  ClientWidth = 674
+  ClientHeight = 338
+  ClientWidth = 684
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

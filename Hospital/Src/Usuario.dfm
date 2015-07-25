@@ -1,9 +1,10 @@
 object UsuarioFrm: TUsuarioFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Usuario'
-  ClientHeight = 329
-  ClientWidth = 611
+  ClientHeight = 339
+  ClientWidth = 621
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
