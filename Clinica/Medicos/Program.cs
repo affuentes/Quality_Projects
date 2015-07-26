@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Citas
+namespace Medicos
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Citas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Citas());
+            Application.Run(new Form1());
         }
     }
 }
