@@ -1,9 +1,10 @@
 object CitaFrm: TCitaFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Cita'
-  ClientHeight = 304
-  ClientWidth = 613
+  ClientHeight = 314
+  ClientWidth = 623
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

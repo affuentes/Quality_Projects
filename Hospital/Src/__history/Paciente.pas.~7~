@@ -1,0 +1,34 @@
+unit Paciente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TPacienteFrm = class(TForm)
+    panBotones: TPanel;
+    btAyuda: TButton;
+    btAgregar: TButton;
+    btCambiar: TButton;
+    btEliminar: TButton;
+    btRegresar: TButton;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  PacienteFrm: TPacienteFrm;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_HospitalCon;
+
+end.

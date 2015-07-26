@@ -1,9 +1,10 @@
 object ReportedeCitasFrm: TReportedeCitasFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Reporte de Citas'
-  ClientHeight = 272
-  ClientWidth = 471
+  ClientHeight = 282
+  ClientWidth = 481
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

@@ -1,9 +1,10 @@
 object PacienteFrm: TPacienteFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Paciente'
-  ClientHeight = 265
-  ClientWidth = 458
+  ClientHeight = 275
+  ClientWidth = 625
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,92 +13,17 @@ object PacienteFrm: TPacienteFrm
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
-  object panBotones: TPanel
-    Left = 8
-    Top = 8
-    Width = 439
-    Height = 89
-    TabOrder = 0
-  end
-  object btAyuda: TButton
-    Left = 28
-    Top = 16
-    Width = 75
-    Height = 75
-    Caption = 'Ayuda'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Calibri'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-  end
-  object btAgregar: TButton
-    Left = 109
-    Top = 16
-    Width = 75
-    Height = 75
-    Caption = 'Agregar'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Calibri'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-  end
-  object btCambiar: TButton
-    Left = 190
-    Top = 16
-    Width = 75
-    Height = 75
-    Caption = 'Cambiar'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Calibri'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-  end
-  object btEliminar: TButton
-    Left = 271
-    Top = 16
-    Width = 75
-    Height = 75
-    Caption = 'Eliminar'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Calibri'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-  end
-  object btRegresar: TButton
-    Left = 352
-    Top = 16
-    Width = 75
-    Height = 75
-    Caption = 'Regresar'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -19
-    Font.Name = 'Calibri'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-  end
-  object DBGrid1: TDBGrid
+  object DBGPaciente: TDBGrid
     Left = 8
     Top = 120
-    Width = 439
+    Width = 593
     Height = 120
     DataSource = DM_HospitalFrm.DSPaciente
-    TabOrder = 6
+    TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -112,14 +38,123 @@ object PacienteFrm: TPacienteFrm
       item
         Expanded = False
         FieldName = 'Nombre'
-        Width = 64
+        Width = 300
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Enfermedad'
-        Width = 64
+        Width = 200
         Visible = True
       end>
+  end
+  object panBotones: TPanel
+    Left = 8
+    Top = 8
+    Width = 593
+    Height = 89
+    TabOrder = 1
+    object btBuscar: TButton
+      Left = 505
+      Top = 6
+      Width = 75
+      Height = 75
+      Caption = 'Buscar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 5
+    end
+    object btEliminar: TButton
+      Left = 424
+      Top = 6
+      Width = 75
+      Height = 75
+      Caption = 'Eliminar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btEliminarClick
+    end
+    object btEditar: TButton
+      Left = 343
+      Top = 6
+      Width = 75
+      Height = 75
+      Caption = 'Editar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btEditarClick
+    end
+    object btNuevo: TButton
+      Left = 101
+      Top = 8
+      Width = 75
+      Height = 73
+      Caption = 'Nuevo'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btNuevoClick
+    end
+    object btAyuda: TButton
+      Left = 20
+      Top = 8
+      Width = 75
+      Height = 75
+      Caption = 'Ayuda'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object btCancelar: TButton
+      Left = 262
+      Top = 6
+      Width = 75
+      Height = 75
+      Caption = 'Cancelar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btCancelarClick
+    end
+    object btGuardar: TButton
+      Left = 181
+      Top = 7
+      Width = 75
+      Height = 73
+      Caption = 'Guardar'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+    end
   end
 end

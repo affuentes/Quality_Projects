@@ -9,13 +9,21 @@ uses
 
 type
   TUsuarioFrm = class(TForm)
+    DBGUsuario: TDBGrid;
     panBotones: TPanel;
-    btRegresar: TButton;
+    btBuscar: TButton;
     btEliminar: TButton;
-    btCambiar: TButton;
-    btAgregar: TButton;
+    btEditar: TButton;
+    btNuevo: TButton;
     btAyuda: TButton;
-    DBGrid1: TDBGrid;
+    btCancelar: TButton;
+    btGuardar: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure btNuevoClick(Sender: TObject);
+    procedure btCancelarClick(Sender: TObject);
+    procedure btEditarClick(Sender: TObject);
+    procedure btEliminarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,5 +38,41 @@ implementation
 {$R *.dfm}
 
 uses DM_HospitalCon;
+
+procedure TUsuarioFrm.btCancelarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatUsuario.Close;
+  DM_HospitalFrm.ADODatUsuario.Open;
+  DM_HospitalFrm.ADODatUsuario.Cancel;
+end;
+
+procedure TUsuarioFrm.btEditarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatUsuario.Edit;
+  DBGUsuario.ReadOnly:=False;
+  FocusControl(DBGUsuario);
+end;
+
+procedure TUsuarioFrm.btEliminarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatUsuario.Delete;
+end;
+
+procedure TUsuarioFrm.btNuevoClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatUsuario.Append;
+  DBGUsuario.ReadOnly:=False;
+  FocusControl(DBGUsuario);
+end;
+
+procedure TUsuarioFrm.FormCreate(Sender: TObject);
+begin
+        DM_HospitalFrm := TDM_HospitalFrm.Create(Self);
+end;
+
+procedure TUsuarioFrm.FormDestroy(Sender: TObject);
+begin
+        DM_HospitalFrm.Free;
+end;
 
 end.
