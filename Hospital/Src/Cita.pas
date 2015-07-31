@@ -63,7 +63,7 @@ end;
 
 procedure TCitaFrm.btGuardarClick(Sender: TObject);
 begin
-  DM_HospitalFrm.ADODatCita.UpdateStatus(0);
+  DM_HospitalFrm.ADODatCita.UpdateStatus();
 end;
 
 procedure TCitaFrm.btNuevoClick(Sender: TObject);

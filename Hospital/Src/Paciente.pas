@@ -61,7 +61,7 @@ end;
 
 procedure TPacienteFrm.btGuardarClick(Sender: TObject);
 begin
-  DM_HospitalFrm.ADODatPaciente.UpdateStatus(0);
+  DM_HospitalFrm.ADODatPaciente.UpdateStatus();
 end;
 
 procedure TPacienteFrm.btNuevoClick(Sender: TObject);

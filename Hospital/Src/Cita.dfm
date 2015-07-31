@@ -163,7 +163,6 @@ object CitaFrm: TCitaFrm
       item
         Expanded = False
         FieldName = 'metodoPago'
-        Width = 69
         Visible = True
       end>
   end
