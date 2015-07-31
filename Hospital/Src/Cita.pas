@@ -24,6 +24,7 @@ type
     procedure btNuevoClick(Sender: TObject);
     procedure btEditarClick(Sender: TObject);
     procedure btEliminarClick(Sender: TObject);
+    procedure btGuardarClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -58,6 +59,11 @@ end;
 procedure TCitaFrm.btEliminarClick(Sender: TObject);
 begin
   DM_HospitalFrm.ADODatCita.Delete;
+end;
+
+procedure TCitaFrm.btGuardarClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatCita.UpdateStatus(0);
 end;
 
 procedure TCitaFrm.btNuevoClick(Sender: TObject);

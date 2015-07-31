@@ -1,9 +1,10 @@
-object MedicoFrm: TMedicoFrm
+object UsuarioFrm: TUsuarioFrm
   Left = 0
   Top = 0
-  Caption = 'Medico'
-  ClientHeight = 270
-  ClientWidth = 615
+  BorderStyle = bsDialog
+  Caption = 'Usuario'
+  ClientHeight = 339
+  ClientWidth = 621
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,14 +13,16 @@ object MedicoFrm: TMedicoFrm
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
-  object DBGMedico: TDBGrid
+  object DBGUsuario: TDBGrid
     Left = 8
-    Top = 128
-    Width = 599
-    Height = 120
-    DataSource = DM_HospitalFrm.DSMedico
+    Top = 112
+    Width = 595
+    Height = 193
+    DataSource = DM_HospitalFrm.DSUsuario
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -29,25 +32,37 @@ object MedicoFrm: TMedicoFrm
     Columns = <
       item
         Expanded = False
-        FieldName = 'idMedico'
+        FieldName = 'idUsuario'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Nombre'
-        Width = 64
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Especialidad'
-        Width = 64
+        FieldName = 'Rol'
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Localidad'
-        Width = 64
+        FieldName = 'Alias'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Contrase'#241'a'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Correo'
+        Width = 100
         Visible = True
       end>
   end
@@ -84,6 +99,7 @@ object MedicoFrm: TMedicoFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 4
+      OnClick = btEliminarClick
     end
     object btEditar: TButton
       Left = 343
@@ -98,6 +114,7 @@ object MedicoFrm: TMedicoFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = btEditarClick
     end
     object btNuevo: TButton
       Left = 101
@@ -141,6 +158,7 @@ object MedicoFrm: TMedicoFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 2
+      OnClick = btCancelarClick
     end
     object btGuardar: TButton
       Left = 181

@@ -24,7 +24,6 @@ type
     procedure btEliminarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure btGuardarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,11 +56,6 @@ end;
 procedure TMedicoFrm.btEliminarClick(Sender: TObject);
 begin
   DM_HospitalFrm.ADODatMedico.Delete;
-end;
-
-procedure TMedicoFrm.btGuardarClick(Sender: TObject);
-begin
-  DM_HospitalFrm.ADODatMedico.UpdateStatus(0);
 end;
 
 procedure TMedicoFrm.btNuevoClick(Sender: TObject);

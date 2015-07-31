@@ -155,6 +155,7 @@ object PacienteFrm: TPacienteFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 6
+      OnClick = btGuardarClick
     end
   end
 end

@@ -1,9 +1,10 @@
 object MenuPpalFrm: TMenuPpalFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Menu Principal'
-  ClientHeight = 328
-  ClientWidth = 674
+  ClientHeight = 338
+  ClientWidth = 684
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,9 +29,9 @@ object MenuPpalFrm: TMenuPpalFrm
     ParentFont = False
   end
   object panBotones: TPanel
-    Left = 129
+    Left = 65
     Top = 72
-    Width = 417
+    Width = 520
     Height = 185
     TabOrder = 0
     object btMedico: TButton
@@ -77,6 +78,21 @@ object MenuPpalFrm: TMenuPpalFrm
       ParentFont = False
       TabOrder = 2
       OnClick = btCitaClick
+    end
+    object btUsuario: TButton
+      Left = 400
+      Top = 49
+      Width = 87
+      Height = 87
+      Caption = 'Usuario'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Calibri'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btUsuarioClick
     end
   end
   object btAyuda: TButton

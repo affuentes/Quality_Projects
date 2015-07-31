@@ -24,7 +24,6 @@ type
     procedure btCancelarClick(Sender: TObject);
     procedure btEditarClick(Sender: TObject);
     procedure btEliminarClick(Sender: TObject);
-    procedure btGuardarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,11 +56,6 @@ end;
 procedure TPacienteFrm.btEliminarClick(Sender: TObject);
 begin
   DM_HospitalFrm.ADODatPaciente.Delete;
-end;
-
-procedure TPacienteFrm.btGuardarClick(Sender: TObject);
-begin
-  DM_HospitalFrm.ADODatPaciente.UpdateStatus(0);
 end;
 
 procedure TPacienteFrm.btNuevoClick(Sender: TObject);

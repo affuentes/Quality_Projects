@@ -16,21 +16,21 @@ object MenuPpalFrm: TMenuPpalFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 272
+    Left = 228
     Top = 24
-    Width = 144
-    Height = 26
+    Width = 241
+    Height = 42
     Caption = 'Sistema de Citas '
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -21
+    Font.Height = -35
     Font.Name = 'Calibri'
     Font.Style = []
     ParentFont = False
   end
   object panBotones: TPanel
     Left = 65
-    Top = 72
+    Top = 80
     Width = 520
     Height = 185
     TabOrder = 0
@@ -96,8 +96,8 @@ object MenuPpalFrm: TMenuPpalFrm
     end
   end
   object btAyuda: TButton
-    Left = 584
-    Top = 288
+    Left = 594
+    Top = 298
     Width = 82
     Height = 32
     Caption = 'Ayuda'
