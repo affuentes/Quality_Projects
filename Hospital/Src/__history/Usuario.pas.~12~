@@ -1,0 +1,56 @@
+unit Usuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Data.Win.ADODB, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TUsuarioFrm = class(TForm)
+    DBGUsuario: TDBGrid;
+    panBotones: TPanel;
+    btBuscar: TButton;
+    btEliminar: TButton;
+    btEditar: TButton;
+    btNuevo: TButton;
+    btAyuda: TButton;
+    btCancelar: TButton;
+    btGuardar: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure btNuevoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  UsuarioFrm: TUsuarioFrm;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_HospitalCon;
+
+procedure TUsuarioFrm.btNuevoClick(Sender: TObject);
+begin
+  DM_HospitalFrm.ADODatUsuario.Append;
+  DBGUsuario.ReadOnly:=False;
+  FocusControl(DBGUsuario);
+end;
+
+procedure TUsuarioFrm.FormCreate(Sender: TObject);
+begin
+        DM_HospitalFrm := TDM_HospitalFrm.Create(Self);
+end;
+
+procedure TUsuarioFrm.FormDestroy(Sender: TObject);
+begin
+        DM_HospitalFrm.Free;
+end;
+
+end.

@@ -1,5 +1,0 @@
-object DMHospitalFrm: TDMHospitalFrm
-  OldCreateOrder = False
-  Height = 339
-  Width = 483
-end

@@ -1,0 +1,36 @@
+unit Usuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Data.Win.ADODB, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TUsuarioFrm = class(TForm)
+    DBGUsuario: TDBGrid;
+    panBotones: TPanel;
+    btBuscar: TButton;
+    btEliminar: TButton;
+    btEditar: TButton;
+    btNuevo: TButton;
+    btAyuda: TButton;
+    btCancelar: TButton;
+    btGuardar: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  UsuarioFrm: TUsuarioFrm;
+
+implementation
+
+{$R *.dfm}
+
+uses DM_HospitalCon;
+
+end.

@@ -1,7 +1,7 @@
 ﻿object DM_HospitalFrm: TDM_HospitalFrm
   OldCreateOrder = False
   Height = 339
-  Width = 516
+  Width = 741
   object ADOConHospital: TADOConnection
     Connected = True
     ConnectionString = 
