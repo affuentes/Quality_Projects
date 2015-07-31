@@ -38,7 +38,7 @@ object PacienteFrm: TPacienteFrm
       item
         Expanded = False
         FieldName = 'Nombre'
-        Width = 300
+        Width = 250
         Visible = True
       end
       item
