@@ -1,9 +1,10 @@
 object CitaFrm: TCitaFrm
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'Cita'
-  ClientHeight = 304
-  ClientWidth = 613
+  ClientHeight = 314
+  ClientWidth = 623
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -49,6 +50,7 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 4
+      OnClick = btEliminarClick
     end
     object btEditar: TButton
       Left = 343
@@ -63,6 +65,7 @@ object CitaFrm: TCitaFrm
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = btEditarClick
     end
     object btNuevo: TButton
       Left = 101
@@ -160,7 +163,6 @@ object CitaFrm: TCitaFrm
       item
         Expanded = False
         FieldName = 'metodoPago'
-        Width = 69
         Visible = True
       end>
   end
