@@ -156,7 +156,7 @@ object DM_QualityProjectsCdsFrm: TDM_QualityProjectsCdsFrm
         ParamType = ptInput
       end
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'ID_ROL'
         ParamType = ptInput
       end>

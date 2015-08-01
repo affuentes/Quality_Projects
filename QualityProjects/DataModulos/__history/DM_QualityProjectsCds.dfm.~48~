@@ -197,7 +197,7 @@ object DM_QualityProjectsCdsFrm: TDM_QualityProjectsCdsFrm
       end>
     ProviderName = 'DSP_ManActividades'
     RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
-    OnNewRecord = CDS_ManIntegrantesNewRecord
+    OnNewRecord = CDS_ManActividadesNewRecord
     Left = 232
     Top = 96
     object CDS_ManActividadesID_ACTIVIDAD: TIntegerField
@@ -247,25 +247,101 @@ object DM_QualityProjectsCdsFrm: TDM_QualityProjectsCdsFrm
     ProviderName = 'DSP_SelRoles'
     RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
     AfterScroll = CDS_SelRolesAfterScroll
-    OnNewRecord = CDS_ManRolesNewRecord
-    Left = 400
+    Left = 376
     Top = 16
-    object IntegerField1: TIntegerField
+    object CDS_SelRolesID_ROL: TIntegerField
       FieldName = 'ID_ROL'
       Required = True
     end
-    object IntegerField2: TIntegerField
+    object CDS_SelRolesID_PROYECTO: TIntegerField
       FieldName = 'ID_PROYECTO'
       Required = True
     end
-    object StringField1: TStringField
+    object CDS_SelRolesNOMBRE_ROL: TStringField
       FieldName = 'NOMBRE_ROL'
       Size = 120
     end
   end
   object DS_SelRoles: TDataSource
     DataSet = CDS_SelRoles
-    Left = 400
+    Left = 376
     Top = 32
+  end
+  object CDS_ManRiesgos: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'ID_PROYECTO'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DSP_ManRiesgos'
+    RemoteServer = DM_QualityProjectsConFrm.LC_QualityProjects
+    OnNewRecord = CDS_ManRiesgosNewRecord
+    Left = 232
+    Top = 176
+    object CDS_ManRiesgosID_RIESGO: TIntegerField
+      FieldName = 'ID_RIESGO'
+      Required = True
+    end
+    object CDS_ManRiesgosID_PROYECTO: TIntegerField
+      FieldName = 'ID_PROYECTO'
+      Required = True
+    end
+    object CDS_ManRiesgosID_FASE: TIntegerField
+      FieldName = 'ID_FASE'
+      Required = True
+    end
+    object CDS_ManRiesgosID_ROL: TIntegerField
+      FieldName = 'ID_ROL'
+      Required = True
+    end
+    object CDS_ManRiesgosID_INTEGRANTE: TIntegerField
+      FieldName = 'ID_INTEGRANTE'
+      Required = True
+    end
+    object CDS_ManRiesgosESTADO_RIESGO: TStringField
+      FieldName = 'ESTADO_RIESGO'
+      Size = 15
+    end
+    object CDS_ManRiesgosFECHA_CREACION_RIESGO: TSQLTimeStampField
+      FieldName = 'FECHA_CREACION_RIESGO'
+    end
+    object CDS_ManRiesgosFECHA_REPORTE_RIESGO: TSQLTimeStampField
+      FieldName = 'FECHA_REPORTE_RIESGO'
+    end
+    object CDS_ManRiesgosDEBIDO_A_RIESGO: TStringField
+      FieldName = 'DEBIDO_A_RIESGO'
+      Size = 1000
+    end
+    object CDS_ManRiesgosPUEDE_OCURRIR_RIESGO: TStringField
+      FieldName = 'PUEDE_OCURRIR_RIESGO'
+      Size = 1000
+    end
+    object CDS_ManRiesgosRESULTADO_EN_RIESGO: TStringField
+      FieldName = 'RESULTADO_EN_RIESGO'
+      Size = 1000
+    end
+    object CDS_ManRiesgosESTRATEGIA_DE_RESPUESTA_RIESGO: TStringField
+      FieldName = 'ESTRATEGIA_DE_RESPUESTA_RIESGO'
+      Size = 1000
+    end
+    object CDS_ManRiesgosTIPO_RIESGO: TStringField
+      FieldName = 'TIPO_RIESGO'
+      Size = 15
+    end
+    object CDS_ManRiesgosPROBABILIDAD: TStringField
+      FieldName = 'PROBABILIDAD'
+      Size = 10
+    end
+    object CDS_ManRiesgosIMPACTO: TStringField
+      FieldName = 'IMPACTO'
+      Size = 10
+    end
+  end
+  object DS_ManRiesgos: TDataSource
+    DataSet = CDS_ManRiesgos
+    Left = 232
+    Top = 192
   end
 end
